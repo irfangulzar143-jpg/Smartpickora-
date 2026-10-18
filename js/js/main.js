@@ -75,11 +75,27 @@ document.addEventListener("error", e => {
   if (i > -1) img.src = placeholderImage(PRODUCTS[i].name, catById(PRODUCTS[i].category).hue, i);
 }, true);
 
-/* Mobile menu */
-$("#menuToggle").addEventListener("click", () => {
-  const o = $("#mainNav").classList.toggle("open");
-  $("#menuToggle").setAttribute("aria-expanded", o);
-});
+/* Safe mobile menu */
+const menuToggle = $("#menuToggle");
+const mainNav = $("#mainNav");
 
-$("#year").textContent = new Date().getFullYear();
-renderHome(); syncCompare();
+if (menuToggle && mainNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mainNav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+}
+
+/* Footer year */
+const yearElement = $("#year");
+
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
+
+/* Render homepage safely */
+if (typeof CATEGORIES !== "undefined" &&
+    typeof PRODUCTS !== "undefined") {
+  renderHome();
+  syncCompare();
+}
