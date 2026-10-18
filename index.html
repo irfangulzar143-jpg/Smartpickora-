@@ -5,44 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SmartPickora – Discover Better Products. Make Smarter Choices.</title>
 <meta name="description" content="SmartPickora helps you explore and compare product examples across electronics, home, travel, fitness, beauty and office categories. Demo content.">
-<link rel="canonical" href="https://YOUR-USERNAME.github.io/smartpickora/">
+<link rel="canonical" href="https://irfangulzar143-jpg.github.io/Smartpickora-/">
 <meta property="og:title" content="SmartPickora – Discover Better Products">
 <meta property="og:description" content="Explore product examples and compare options before you buy.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://YOUR-USERNAME.github.io/smartpickora/">
-<link rel="stylesheet" href="css/style.css">
+<meta property="og:url" content="https://irfangulzar143-jpg.github.io/Smartpickora-/">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap bar">
-    <a class="logo" href="index.html" aria-label="SmartPickora home">Smart<span>Pickora</span></a>
-    <div class="tools">
-      <button id="searchToggle" class="icon-btn" aria-label="Search products" aria-expanded="false" aria-controls="searchPanel">&#128269;</button>
-      <button id="menuToggle" class="icon-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">&#9776;</button>
-    </div>
-  </div>
-  <div id="searchPanel" class="search-panel">
-    <form id="searchForm" class="wrap" role="search">
-      <input id="searchInput" type="search" placeholder="Search by product or category" aria-label="Search products">
-      <button class="btn btn-teal" type="submit">Search</button>
-    </form>
-  </div>
-  <nav id="mainNav" class="main-nav" aria-label="Main">
-    <div class="wrap">
-      <a href="index.html">Home</a>
-      <a href="products.html?cat=electronics">Electronics</a>
-      <a href="products.html?cat=home-kitchen">Home &amp; Kitchen</a>
-      <a href="products.html?cat=travel">Travel</a>
-      <a href="products.html?cat=fitness">Fitness</a>
-      <a href="products.html?cat=beauty">Beauty &amp; Personal Care</a>
-      <a href="buying-guides.html">Buying Guides</a>
-      <a href="comparisons.html">Comparisons</a>
-      <a href="about.html">About Us</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
+<div id="site-header"></div>
 
 <main id="main">
   <section class="hero">
@@ -71,12 +42,6 @@
     <aside class="notice" role="note"><strong>Demo Content:</strong> Products, descriptions, pros, cons, and other product details shown on this website are sample content for demonstration purposes only. Real product information, verified reviews, and affiliate links will be added later.</aside>
   </div>
 
-  <section id="searchResults" class="section wrap" hidden>
-    <h2>Search results</h2>
-    <p id="searchInfo" class="muted" aria-live="polite"></p>
-    <div id="searchGrid" class="grid"></div>
-  </section>
-
   <section class="section wrap">
     <h2>Shop by category</h2>
     <div id="categoryGrid" class="cat-grid"></div>
@@ -89,23 +54,11 @@
   </section>
 </main>
 
-<div id="tray" class="tray" hidden aria-live="polite">
-  <span id="trayText"></span>
-  <a class="btn btn-gold" href="comparisons.html">Compare now</a>
-  <button id="trayClear" class="btn btn-line">Clear</button>
-</div>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <p class="logo-foot">Smart<span>Pickora</span></p>
-    <p>Some links on this site may become affiliate links. If a link is active and you buy through it, SmartPickora may earn a commission at no extra cost to you.</p>
-    <p class="links"><a href="about.html">About Us</a> <a href="contact.html">Contact</a> <a href="privacy-policy.html">Privacy Policy</a> <a href="affiliate-disclosure.html">Affiliate Disclosure</a> <a href="terms.html">Terms</a></p>
-    <p>&copy; <span id="year"></span> SmartPickora. Demo content.</p>
-  </div>
-</footer>
+<div id="site-footer"></div>
 
 <script src="js/products.js"></script>
+<script src="js/layout.js"></script>
 <script src="js/main.js"></script>
 <script src="js/search.js"></script>
 </body>
-  </html>
+</html>
