@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmartPickora file check</title>
+<style>
+body{font-family:system-ui,Arial,sans-serif;margin:0;padding:18px;line-height:1.5;color:#0f2742}
+h1{font-size:1.4rem}
+pre{white-space:pre-wrap;word-break:break-word;background:#f3f8fa;border:1px solid #dde6ee;border-radius:10px;padding:14px;font-size:.9rem}
+</style>
+</head>
+<body>
+<h1>SmartPickora file check</h1>
+<p>This page checks that each file loads, is complete, and is the newest version. Wait a few seconds, then copy or screenshot the report below.</p>
+<pre id="out">Checking…</pre>
+<script>
+(function(){
+  var FILES = [
+    ["style.css", ".errbox", "errbox"],
+    ["js/products.js", "});", "OVERRIDES"],
+    ["js/layout.js", "})();", "spToast"],
+    ["js/main.js", "})();", "DATA_OK"],
+    ["js/search.js", "})();", "searchToggle"],
+    ["js/pages.js", "})();", "NEEDS_DATA"]
+  ];
+  var out = document.getElementById("out"), lines = [];
+  function done(){ out.textContent = lines.join("\n"); }
+  function check(i){
+    if (i >= FILES.length){ lines.push("", "Finished. Send me this report."); done(); return; }
+    var f = FILES[i], name = f[0];
+    fetch(name + "?nocache=" + Date.now(), {cache: "no-store"}).then(function(r){
+      if (!r.ok){ lines.push("PROBLEM  " + name + "  -> not found (error " + r.status + "). Check the name and the folder."); return null; }
+      return r.text().then(function(t){
+        var last = t.trim().split("\n").pop().trim();
+        var problems = [];
+        if (last.indexOf(f[1]) !== 0) problems.push("ends with \"" + last.slice(0, 40) + "\" instead of \"" + f[1] + "\" (file may be cut off)");
+        if (t.indexOf(f[2]) === -1) problems.push("looks like an OLD version");
+        if (/\.js$/.test(name)){ try { new Function(t); } catch (e) { problems.push("code error: " + e.message); } }
+        lines.push((problems.length ? "PROBLEM  " : "OK       ") + name + "  (" + t.length + " characters)" + (problems.length ? "  -> " + problems.join("; ") : ""));
+      });
+    }).catch(function(e){ lines.push("PROBLEM  " + name + "  -> could not load (" + e.message + ")"); })
+      .then(function(){ check(i + 1); });
+  }
+  check(0);
+})();
+</script>
+</body>
+</html>
