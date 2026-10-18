@@ -1,11 +1,11 @@
-/* ===== SmartPickora product data =====
+/* ===== SmartPickora product data (js/products.js) =====
    All items are DEMO samples. Nothing here is verified. */
 
 /* 1. Categories */
 const CATEGORIES = [
   {id:"electronics", name:"Electronics", hue:200, sample:"A demo electronics example for readers comparing features, portability and compatibility. Details to be verified."},
   {id:"home-kitchen", name:"Home & Kitchen", hue:25, sample:"A demo home and kitchen example for readers comparing size, ease of use and cleaning. Details to be verified."},
-  {id:"travel", name:"Travel Accessories", hue:260, sample:"A demo travel example for readers comparing weight, durability and convenience. Details to be verified."},
+  {id:"travel", name:"Travel", hue:260, sample:"A demo travel example for readers comparing weight, durability and convenience. Details to be verified."},
   {id:"fitness", name:"Fitness", hue:150, sample:"A demo fitness example for readers comparing comfort, build quality and use cases. Details to be verified."},
   {id:"beauty", name:"Beauty & Personal Care", hue:330, sample:"A demo personal care example for readers comparing features and suitability. Details to be verified."},
   {id:"office", name:"Office & Productivity", hue:45, sample:"A demo office example for readers comparing comfort, setup and compatibility. Details to be verified."}
@@ -22,21 +22,26 @@ const RAW_PRODUCTS = [
   ["office","Wireless Keyboard"],["office","Ergonomic Office Chair"],["office","Laptop Stand"],["office","USB-C Hub"],["office","LED Desk Lamp"]
 ];
 
-/* 3. Images. To use a real photo you have permission to use:
-   upload it to assets/images/ and add a line like
+/* 3. Real photos you have permission to use:
+   upload the photo into the repository (for example a folder called assets/images)
+   and add a line like:
    "anker-737-power-bank": "assets/images/anker-737.jpg"
    (the key is the product name in lowercase with dashes). */
 const IMAGE_FILES = {
 };
 
-/* 4. Replace demo info with verified info later:
-   add an entry here using the same key. Example:
-   "anker-737-power-bank": {isDemo:false, price:"$00.00", description:"Your verified text",
-      amazonAffiliateUrl:"your approved link", cjAffiliateUrl:""}  */
+/* 4. Replace demo info with verified info later. Example:
+   "anker-737-power-bank": {
+      isDemo:false, price:"$00.00", rating:"4.5 / 5",
+      description:"Your verified text",
+      amazonAffiliateUrl:"paste your approved Amazon Associates link here",
+      cjAffiliateUrl:"paste your approved CJ Affiliate link here"
+   }
+   Links must start with https:// . Leave them "" until you are approved. */
 const OVERRIDES = {
 };
 
-/* ----- Builder (no need to edit below) ----- */
+/* ----- Builder (no need to edit below this line) ----- */
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 
 function placeholderImage(label, hue, seed){
