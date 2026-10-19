@@ -192,6 +192,7 @@
     setMeta("Buying Guides (Demo) – SmartPickora", "Sample buying guide outlines on SmartPickora. Demo content only.");
     root.innerHTML = crumbs([["Home","index.html"],["Buying Guides"]]) + `<section class="section wrap">
       <h1>Buying Guides</h1>${NOTICE}
+      <article class="notice"><strong>Featured seasonal guide:</strong> Research budget-friendly USA winter jacket styles, what to compare before buying, and how to assess warmth and fit. <a href="winter-jackets.html">Read the Winter Jackets Buying Guide</a>.</article>
       <p class="muted">These are short sample outlines. Full guides will be written after real research. They are not product tests.</p>
       <div class="grid">${GUIDES.map(([t, c, s, pts]) => `<article class="card"><div class="cb">
         <span class="demo-tag">DEMO CONTENT</span><h2 class="gh">${esc(t)}</h2><p>${esc(s)}</p>
