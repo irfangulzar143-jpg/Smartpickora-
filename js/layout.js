@@ -4,12 +4,12 @@
 (function(){
   "use strict";
   const NAV = [
-    ["index.html","Home"],["winter-jackets.html","Winter Jackets"],["products.html?cat=electronics","Electronics"],["products.html?cat=home-kitchen","Home &amp; Kitchen"],
+    ["index.html","Home"],["fashion.html","Fashion Collection"],["products.html?cat=electronics","Electronics"],["products.html?cat=home-kitchen","Home &amp; Kitchen"],
     ["products.html?cat=travel","Travel"],["products.html?cat=fitness","Fitness"],["products.html?cat=beauty","Beauty &amp; Personal Care"],
     ["products.html?cat=office","Office &amp; Productivity"],["buying-guides.html","Buying Guides"],["comparisons.html","Comparisons"],
     ["about.html","About Us"],["contact.html","Contact"]
   ];
-  const FOOT = [["about.html","About Us"],["contact.html","Contact"],["winter-jackets.html","Winter Jackets"],["privacy-policy.html","Privacy Policy"],["affiliate-disclosure.html","Affiliate Disclosure"],["terms.html","Terms"]];
+  const FOOT = [["about.html","About Us"],["contact.html","Contact"],["fashion.html","Fashion Collection"],["privacy-policy.html","Privacy Policy"],["affiliate-disclosure.html","Affiliate Disclosure"],["terms.html","Terms"]];
 
   function slot(id, atTop){
     let el = document.getElementById(id);
