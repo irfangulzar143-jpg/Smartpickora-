@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://irfangulzar143-jpg.github.io/Smartpickora-/sitemap.xml
