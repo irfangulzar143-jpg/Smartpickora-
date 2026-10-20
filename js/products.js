@@ -7,7 +7,7 @@ const CATEGORIES = [
 const RAW_PRODUCTS = [
  ["pets","Dog Bed"],["pets","Dog Collar"],["pets","Dog Harness"],["pets","Dog Leash"],["pets","Cat Water Fountain"],["pets","Litter Box"],["pets","Pet Carrier"],["pets","Pet Grooming Brush"],["pets","Interactive Dog Toy"],["pets","Cat Scratching Post"],
  ["clothing","Women's Clothing Basics"],["clothing","Men's Casual Shirts"],["clothing","T-Shirts & Tops"],["clothing","Jeans & Denim"],["clothing","Dresses & Skirts"],["clothing","Jackets & Coats"],["clothing","Activewear & Leggings"],["clothing","Plus-Size Clothing"],["clothing","Sweaters & Knitwear"],["clothing","Fashion Accessories"],
- ["electronics","Bluetooth Speaker"],["electronics","Bluetooth Headphones"],["electronics","Portable Charger"],["electronics","USB-C Hub"],["electronics","QINLIANF Outlet Extender & USB Charging Station"]
+ ["electronics","Bluetooth Speaker"],["electronics","Bluetooth Headphones"],["electronics","Portable Charger"],["electronics","USB-C Hub"],["electronics","QINLIANF Outlet Extender & USB Charging Station"],["electronics","Amazon Echo Dot Smart Speaker"],["electronics","Apple AirTag Tracker"],["electronics","Amazon Fire TV Stick 4K"],["electronics","Wireless Earbuds"],["electronics","Wireless Keyboard"]
 ];
 const IMAGE_FILES = {};
 const OVERRIDES = {
