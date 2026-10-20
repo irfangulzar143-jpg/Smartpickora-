@@ -20,7 +20,7 @@ const OVERRIDES = {
  "amazon-echo-dot-smart-speaker": {
   isDemo:false,
   description:"Amazon Echo Dot (newest model), Deep Sea Blue, Pack of 1, Device only. A compact Alexa smart speaker designed for bedrooms, dining rooms and offices. The Amazon listing text supplied for SmartPickora shows a 4.7/5 rating from 201,196 ratings, but the exact newest-model ASIN and current rating should be checked on Amazon. The supplied listing also says this item cannot be shipped to the selected delivery location in Pakistan, so check eligibility before purchase.",
-  price:null,
+  price:"$158.98 (user-provided price; verify current Amazon price)",
   rating:"4.7/5 (201,196 ratings — as shown in supplied listing; recheck on Amazon)",
   features:["Play music, audiobooks and podcasts from supported services such as Amazon Music, Apple Music and Spotify, or use Bluetooth","Use Alexa for questions, weather updates, hands-free timers, alarms and jokes","Control compatible smart-home devices with voice commands and routines","Built-in motion and indoor-temperature sensors can trigger compatible routines, according to the supplied listing","Pair compatible Echo devices for multi-room audio or use with compatible Fire TV setups","The supplied listing describes eero Built-in Wi-Fi extension; check the exact model’s feature list before relying on this capability","Colour: Deep Sea Blue; configuration: Device only; pack size: 1"],
   pros:["Useful voice assistant and speaker in one device","Supports multiple music and podcast services","Can control compatible smart-home devices","Compact option for a bedroom, dining room or office"],
