@@ -109,12 +109,20 @@
     ];
     root.innerHTML = crumbs([["Home","index.html"],["Products","products.html"],[c.name,"products.html?cat=" + p.category],[p.name]]) + `
     <article class="section wrap">
+      ${p.id === "amazon-echo-dot-smart-speaker" ? `
+      <section class="echo-cinematic-listing" aria-label="Echo Dot cinematic product showcase">
+        <div class="echo-cinema-copy"><span class="cinematic-eyebrow">SMARTPICKORA • FEATURED ELECTRONICS</span><h1>Amazon Echo Dot</h1><p>Small speaker. Big atmosphere.</p><div class="echo-cinema-price">${esc(p.price || "$158.98")}</div><div class="echo-cinema-actions">${affiliateButton(p)}<a class="btn btn-line" href="#echo-details">Explore product details</a></div><small>Price supplied for this listing; verify current price, exact model and shipping on Amazon.</small></div>
+        <div class="echo-cinema-visual"><div class="echo-video-frame"><div class="echo-light-beam"></div><div class="echo-rings"></div><img src="${esc(p.image)}" alt="${esc(p.imageAlt)}" class="echo-motion-product"><span class="echo-video-label">CINEMATIC MOTION PREVIEW</span><span class="echo-video-time">00:30 STORYBOARD</span></div><div class="echo-scene-strip"><span>01 / GLOW</span><span>02 / FLOAT</span><span>03 / REVEAL</span></div></div>
+      </section>
+      <div class="echo-gallery-row"><div class="imgbox big"><img id="mainImg" src="${esc(gallery[0])}" data-pid="${esc(p.id)}" alt="${esc(p.imageAlt)}" width="400" height="300"></div><div class="echo-gallery-caption"><strong>Deep Sea Blue</strong><p>Product image used for this listing. Additional gallery thumbnails below use SmartPickora’s illustrative artwork; they are not official Amazon photos.</p><div class="thumbs">${gallery.map((g, i) => `<button type="button" class="thumb" data-src="${esc(g)}" aria-label="Show product image ${i + 1}"><img src="${esc(g)}" alt="" loading="lazy" width="80" height="60"></button>`).join("")}</div></div></div>
+      ` : `
       <div class="detail-grid">
         <div>
           <div class="imgbox big"><img id="mainImg" src="${esc(gallery[0])}" data-pid="${esc(p.id)}" alt="${esc(p.imageAlt)}" width="400" height="300">${p.isDemo ? '<span class="demo">DEMO</span>' : ""}</div>
           <div class="thumbs">${gallery.map((g, i) => `<button type="button" class="thumb" data-src="${esc(g)}" aria-label="Show demo image ${i + 1}"><img src="${esc(g)}" alt="" loading="lazy" width="80" height="60"></button>`).join("")}</div>
-        </div>
-        <div>
+        </div>` }
+
+        <div id="echo-details">
           <span class="cat">${esc(c.name)}</span><h1>${esc(p.name)}</h1>
           <p class="muted">${esc(p.description)}</p>
           <p class="meta"><strong>Price:</strong> ${p.price == null ? "Price to be verified" : esc(p.price)}</p>
@@ -123,7 +131,7 @@
         </div>
       </div>
       ${NOTICE}
-      <h2>Overview</h2><p>${esc(p.description)} This page has no first-hand testing and does not describe verified specifications.</p>
+      ${p.id === "amazon-echo-dot-smart-speaker" ? '<section class="echo-storyboard"><h2>30-second cinematic storyboard</h2><div class="echo-story-grid"><div><b>00–08s</b><strong>Light wakes up</strong><p>Blue studio glow reveals the speaker silhouette.</p></div><div><b>08–20s</b><strong>Float &amp; orbit</strong><p>Slow floating movement and orbiting light rings highlight the shape.</p></div><div><b>20–30s</b><strong>Product reveal</strong><p>Name, key benefits and retailer call-to-action appear.</p></div></div><p class="muted small">This is an animated webpage preview/storyboard, not an MP4 video file.</p></section>' : ''}<h2>Overview</h2><p>${esc(p.description)} This page has no first-hand testing and does not describe verified specifications.</p>
       <h2>Important features</h2>${ul(p.features)}
       <div class="pc"><div class="pro"><h3>Sample pros</h3>${ul(p.pros)}</div><div class="con"><h3>Sample cons</h3>${ul(p.cons)}</div></div>
       <h2>Who might consider this product</h2><p>Readers who want to compare ${esc(c.name)} options and check verified specifications before choosing.</p>
