@@ -11,6 +11,30 @@
   ];
   const FOOT = [["about.html","About Us"],["contact.html","Contact"],["fashion.html","Fashion Collection"],["privacy-policy.html","Privacy Policy"],["affiliate-disclosure.html","Affiliate Disclosure"],["terms.html","Terms"]];
 
+  /* Google Analytics 4: add the real Measurement ID (format G-XXXXXXXXXX) after creating a GA4 web stream.
+     Analytics stays disabled while this value is blank. Never paste an account password or secret here. */
+  const GA_MEASUREMENT_ID = "";
+  if (/^G-[A-Z0-9]+$/.test(GA_MEASUREMENT_ID)) {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_MEASUREMENT_ID);
+    const gaScript = document.createElement("script");
+    gaScript.async = true;
+    gaScript.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_MEASUREMENT_ID);
+    document.head.appendChild(gaScript);
+    document.addEventListener("click", function(event) {
+      const link = event.target.closest("a[rel~='sponsored']");
+      if (link && typeof window.gtag === "function") {
+        window.gtag("event", "affiliate_click", {
+          link_url: link.href,
+          link_text: (link.innerText || link.textContent || "").trim(),
+          page_location: window.location.href
+        });
+      }
+    });
+  }
+
   function slot(id, atTop){
     let el = document.getElementById(id);
     if (!el){
@@ -50,7 +74,7 @@
       <a class="btn btn-gold" href="comparisons.html">Compare now</a><button type="button" id="trayClear" class="btn btn-line">Clear</button></div>
     <footer class="site-footer"><div class="wrap">
       <p class="logo-foot">Smart<span>Pickora</span></p>
-      <p>SmartPickora is an independent website. It is not officially affiliated with, endorsed by or sponsored by Amazon, CJ Affiliate or any retailer or brand shown. Some links may become affiliate links, and we may earn a commission at no extra cost to you.</p>
+      <p>SmartPickora is an independent website and is not endorsed by Amazon or any retailer. Some links are affiliate links, meaning we may earn from qualifying purchases at no extra cost to you. <strong>As an Amazon Associate I earn from qualifying purchases.</strong> See our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
       <p class="links">${FOOT.map(([h, t]) => `<a href="${h}">${t}</a>`).join(" ")}</p>
       <p>&copy; <span id="year">${new Date().getFullYear()}</span> SmartPickora. Demo content.</p></div></footer>`;
 
