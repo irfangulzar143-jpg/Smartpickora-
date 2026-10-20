@@ -10,66 +10,44 @@
 <meta property="og:description" content="Shop smarter with focused guides for pet accessories, clothing, fashion and electronics.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://irfangulzar143-jpg.github.io/Smartpickora-/">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 </head>
 <body data-page="home">
 <div id="site-header"></div>
 <main id="main">
-  <section class="hero cinematic-hero">
-    <div class="wrap hero-grid cinematic-grid">
-      <div class="cinematic-copy">
-        <p class="tagline">SMARTER PICKS. PREMIUM DISCOVERY.</p>
-        <p class="cinematic-eyebrow">FEATURED FIND • ELECTRONICS</p>
-        <h1>Meet the Amazon Echo Dot</h1>
-        <p class="lead">Compact sound, helpful Alexa features, and smart-home convenience—explore the details before you buy.</p>
-        <p class="cinematic-price">$158.98 <span>user-provided price · verify current Amazon price</span></p>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="tagline">SMARTER PICKS FOR EVERYDAY LIFE</p>
+        <h1>Pet Accessories, Clothing &amp; Everyday Electronics</h1>
+        <p class="lead">Explore practical pet supplies, everyday clothing and useful electronics. Compare features, learn what to check before buying, and make more informed choices.</p>
         <div class="btn-row">
-          <a class="btn btn-gold" href="product.html?id=amazon-echo-dot-smart-speaker">Explore Echo Dot</a>
-          <a class="btn btn-line" href="products.html?cat=electronics">Browse Electronics</a>
+          <a class="btn btn-teal" href="products.html">Explore Products</a>
+          <a class="btn btn-line" href="buying-guides.html">Browse Buying Guides</a>
+          <a class="btn btn-gold" href="pet-accessories.html">Explore Pet Accessories</a>
         </div>
-        <p class="cinematic-disclosure">As an Amazon Associate, SmartPickora may earn from qualifying purchases. Check current price, exact model and delivery eligibility on Amazon.</p>
       </div>
-      <div class="cinematic-stage" id="echoHero" aria-label="Featured Amazon Echo Dot product display">
-        <div class="cinematic-loading">Loading featured product…</div>
-      </div>
+      <svg class="hero-art" viewBox="0 0 400 300" role="img" aria-label="Illustration of a shopping bag with product icons">
+        <rect width="400" height="300" rx="24" fill="#e7f4f6"/>
+        <circle cx="320" cy="70" r="46" fill="#bfe3e8"/><circle cx="70" cy="240" r="34" fill="#d5ecef"/>
+        <path d="M120 110h160l14 140a10 10 0 0 1-10 11H116a10 10 0 0 1-10-11z" fill="#0e7c86"/>
+        <path d="M160 110v-18a40 40 0 0 1 80 0v18" fill="none" stroke="#0f2742" stroke-width="10" stroke-linecap="round"/>
+        <circle cx="165" cy="175" r="14" fill="#fff"/><rect x="195" y="160" width="50" height="30" rx="8" fill="#fff"/>
+        <path d="M150 220h100" stroke="#bfe3e8" stroke-width="10" stroke-linecap="round"/>
+      </svg>
     </div>
   </section>
-
-  <div class="wrap">
-    <aside class="notice" role="note"><strong>Shopping transparency:</strong> Product details and prices can change. Verify exact specifications, current price, reviews and delivery availability on the retailer listing before buying.</aside>
-  </div>
-
+  <div class="wrap"><aside class="notice" role="note"><strong>Shopping transparency:</strong> Product cards include examples and researched candidates. Check exact specifications, current prices, reviews and availability on the retailer listing before buying.</aside></div>
   <section class="wrap trust" aria-label="Why SmartPickora">
     <div><strong>Compare side by side</strong><span>Pick up to three products.</span></div>
     <div><strong>Pros and cons</strong><span>Shown clearly on every card.</span></div>
-    <div><strong>Transparent shopping</strong><span>Verify details with the retailer.</span></div>
+    <div><strong>Demo content labelled</strong><span>Verify details before purchase.</span></div>
   </section>
-
-  <section class="section wrap">
-    <h2>Explore our 3 main niches</h2>
-    <div id="categoryGrid" class="cat-grid"></div>
-    <noscript><p class="muted">JavaScript is turned off. Browse directly: <a href="products.html?cat=electronics">Electronics</a>, <a href="fashion.html">Clothing &amp; Fashion</a>, <a href="pet-accessories.html">Pet Accessories</a>.</p></noscript>
+  <section class="section wrap"><h2>Explore our 3 main niches</h2><div id="categoryGrid" class="cat-grid"></div>
+    <noscript><p class="muted">Browse directly: <a href="products.html?cat=electronics">Electronics</a>, <a href="fashion.html">Clothing &amp; Fashion</a>, <a href="pet-accessories.html">Pet Accessories</a>.</p></noscript>
   </section>
-
-  <section class="section wrap">
-    <h2>Featured picks</h2>
-    <p class="muted">Compare useful products across our main categories. Confirm live prices, ratings and availability with each retailer.</p>
-    <div id="featuredGrid" class="grid"></div>
-  </section>
+  <section class="section wrap"><h2>Featured demo products</h2><p class="muted">Compare product features and verify current prices and ratings on retailer listings.</p><div id="featuredGrid" class="grid"></div></section>
 </main>
 <div id="site-footer"></div>
-<script src="js/products.js?v=6"></script>
-<script src="js/layout.js?v=6"></script>
-<script src="js/main.js?v=6"></script>
-<script src="js/search.js?v=6"></script>
-<script>
-(function(){
-  const host=document.getElementById('echoHero');
-  if(!host || typeof PRODUCTS==='undefined') return;
-  const p=PRODUCTS.find(x=>x.id==='amazon-echo-dot-smart-speaker');
-  if(!p) { host.innerHTML='<p>Featured product is temporarily unavailable.</p>'; return; }
-  host.innerHTML='<div class="cinematic-orbit orbit-one"></div><div class="cinematic-orbit orbit-two"></div><div class="cinematic-glow"></div><img class="cinematic-speaker" src="'+String(p.image).replace(/&/g,'&amp;').replace(/"/g,'&quot;')+'" alt="'+String(p.imageAlt||'Echo Dot product illustration').replace(/&/g,'&amp;').replace(/"/g,'&quot;')+'" fetchpriority="high"><div class="cinematic-caption"><span>SMARTPICKORA SELECT</span><strong>Echo Dot</strong><small>Deep Sea Blue · Newest model listing</small></div><div class="cinematic-floating-chip">ALEXA · SMART SOUND</div>';
-})();
-</script>
-</body>
-</html>
+<script src="js/products.js?v=7"></script><script src="js/layout.js?v=7"></script><script src="js/main.js?v=7"></script><script src="js/search.js?v=7"></script>
+</body></html>
