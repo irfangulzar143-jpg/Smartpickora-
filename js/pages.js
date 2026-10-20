@@ -83,7 +83,11 @@
     }
     $("#chips").addEventListener("click", e => { const b = e.target.closest(".chip"); if (b){ cat = b.dataset.cat; update(); } });
     [fPrice, fSort].forEach(el => el.addEventListener("change", update));
-    fQ.addEventListener("input", update);
+    let searchTimer = 0;
+    fQ.addEventListener("input", () => {
+      window.clearTimeout(searchTimer);
+      searchTimer = window.setTimeout(update, 160);
+    });
     update();
   }
 
