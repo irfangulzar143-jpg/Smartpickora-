@@ -48,7 +48,7 @@ function productCard(p){
       <div class="pc"><div class="pro"><p class="lbl">Pros</p><ul>${listHTML(p.pros)}</ul></div>
       <div class="con"><p class="lbl">Cons</p><ul>${listHTML(p.cons)}</ul></div></div>
       <p class="meta"><strong>Price:</strong> ${p.price == null ? "Price to be verified" : esc(p.price)}</p>
-      <p class="meta"><strong>Rating:</strong> ${p.rating == null ? "Sample rating — not a real customer rating" : esc(p.rating)}</p>
+      <p class="meta"><strong>Rating:</strong> ${p.rating == null ? "Not independently verified — check the retailer listing" : esc(p.rating)}</p>
       <div class="actions">
         <a class="btn btn-teal" href="product.html?id=${encodeURIComponent(p.id)}">View Product Details</a>
         <button type="button" class="btn btn-line" data-compare="${esc(p.id)}" aria-pressed="${on}">${on ? "Selected" : "Compare"}</button>
