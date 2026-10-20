@@ -5,6 +5,7 @@ const CATEGORIES = [
  {id:"electronics",name:"Electronics & Gadgets",hue:200,sample:"Check compatibility, electrical specifications, safety certifications and current seller details before purchase."}
 ];
 const RAW_PRODUCTS = [
+ ["pets","Feandrea Orthopedic Dog Sofa Bed XL"],
  ["pets","Dog Bed"],["pets","Dog Collar"],["pets","Dog Harness"],["pets","Dog Leash"],["pets","Cat Water Fountain"],["pets","Litter Box"],["pets","Pet Carrier"],["pets","Pet Grooming Brush"],["pets","Interactive Dog Toy"],["pets","Cat Scratching Post"],
  ["clothing","Women's Clothing Basics"],["clothing","Men's Casual Shirts"],["clothing","T-Shirts & Tops"],["clothing","Jeans & Denim"],["clothing","Dresses & Skirts"],["clothing","Jackets & Coats"],["clothing","Activewear & Leggings"],["clothing","Plus-Size Clothing"],["clothing","Sweaters & Knitwear"],["clothing","Fashion Accessories"],
  ["electronics","Bluetooth Speaker"],["electronics","Bluetooth Headphones"],["electronics","Portable Charger"],["electronics","USB-C Hub"],["electronics","QINLIANF Outlet Extender & USB Charging Station"],["electronics","Amazon Echo Dot Smart Speaker"],["electronics","Apple AirTag Tracker"],["electronics","Amazon Fire TV Stick 4K"],["electronics","Wireless Earbuds"],["electronics","Wireless Keyboard"],["electronics","Microsoft Surface Laptop for Business (2025) — 13.8-inch Core Ultra 7"],["electronics","Medify Air Purifier with HEPA H13 Filter"],
@@ -14,6 +15,17 @@ const RAW_PRODUCTS = [
 ];
 const IMAGE_FILES = {};
 const OVERRIDES = {
+ "feandrea-orthopedic-dog-sofa-bed-xl": {
+  isDemo:false,
+  description:"Feandrea orthopedic dog sofa bed, XL Slate Grey, 104 × 69 × 17 cm, approximately 3 kg. Features listed by the supplied product details include an egg-crate foam base, padded raised U-shaped sides, a water-resistant surface, removable machine-washable cover and non-slip base. The cover is washable at up to 40°C; the foam and side bolsters are not washable/removable. Allow 24–48 hours to expand after vacuum packaging. Verify all details on the retailer listing before purchase.",
+  price:"$48.70 (user-provided price; verify current price)",
+  rating:null,
+  features:["XL size: 104 × 69 × 17 cm; approx. 3 kg","Egg-crate foam base","Padded raised U-shaped sides","Water-resistant surface and non-slip base","Removable cover; wash at up to 40°C following its care label","Foam is not washable and side bolsters are not removable","Allow 24–48 hours to expand after unpacking if vacuum-packed"],
+  pros:["Raised padded sides provide a place for a dog to rest its head","Removable cover helps with routine cleaning","Non-slip base is a useful feature to check for indoor floors"],
+  cons:["Check the inner sleeping area against your dog's measurements","Water-resistant does not mean fully waterproof","Not independently tested by SmartPickora","Price and availability may change"],
+  amazonAffiliateUrl:"https://amzn.eu/d/0c0g7pue?tag=smartpickorau-20",
+  imageAlt:"SmartPickora illustration of a slate-grey sofa-style dog bed; illustration, not the official product photo."
+ },
  "qinlianf-outlet-extender-usb-charging-station": {
   isDemo:false,
   description:"QINLIANF outlet extender and USB charging station. Review the exact outlet layout, USB port specifications, surge-protection details, seller and current price on Amazon before purchase.",
@@ -78,3 +90,6 @@ const PRODUCTS=RAW_PRODUCTS.map(([cat,name],i)=>{
  const base={id,name,category:cat,description:c.sample,features:["Verify key features on the seller's listing","Check suitability and compatibility before purchase"],pros:["A useful category example for comparison"],cons:["Not independently tested","Current price and availability not verified"],price:null,rating:null,isDemo:true,amazonAffiliateUrl:"https://www.amazon.com/s?k="+encodeURIComponent(name)+"&tag=smartpickorau-20",cjAffiliateUrl:"",image:placeholderImage(name,c.hue,i),imageAlt:"SmartPickora illustrative preview for "+name+"; official Amazon product image pending authorization"};
  return Object.assign(base,OVERRIDES[id]||{});
 });
+
+// Signal to js/pages.js that the product catalogue script loaded successfully.
+const DATA_OK = true;
