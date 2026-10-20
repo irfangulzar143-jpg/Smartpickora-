@@ -1,6 +1,7 @@
 /* ===== SmartPickora shared helpers, product cards, compare tray (js/main.js) ===== */
 const $ = (s, r = document) => r.querySelector(s);
 const esc = t => String(t == null ? "" : t).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+window.esc = esc;
 
 /* Is the data file (js/products.js) loaded? */
 const DATA_OK = typeof CATEGORIES !== "undefined" && typeof PRODUCTS !== "undefined" && typeof placeholderImage === "function";
