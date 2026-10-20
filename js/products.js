@@ -7,7 +7,7 @@ const CATEGORIES = [
 const RAW_PRODUCTS = [
  ["pets","Dog Bed"],["pets","Dog Collar"],["pets","Dog Harness"],["pets","Dog Leash"],["pets","Cat Water Fountain"],["pets","Litter Box"],["pets","Pet Carrier"],["pets","Pet Grooming Brush"],["pets","Interactive Dog Toy"],["pets","Cat Scratching Post"],
  ["clothing","Women's Clothing Basics"],["clothing","Men's Casual Shirts"],["clothing","T-Shirts & Tops"],["clothing","Jeans & Denim"],["clothing","Dresses & Skirts"],["clothing","Jackets & Coats"],["clothing","Activewear & Leggings"],["clothing","Plus-Size Clothing"],["clothing","Sweaters & Knitwear"],["clothing","Fashion Accessories"],
- ["electronics","Bluetooth Speaker"],["electronics","Bluetooth Headphones"],["electronics","Portable Charger"],["electronics","USB-C Hub"],["electronics","QINLIANF Outlet Extender & USB Charging Station"],["electronics","Amazon Echo Dot Smart Speaker"],["electronics","Apple AirTag Tracker"],["electronics","Amazon Fire TV Stick 4K"],["electronics","Wireless Earbuds"],["electronics","Wireless Keyboard"],["electronics","Microsoft Surface Laptop for Business (2025) — 13.8-inch Core Ultra 7"],
+ ["electronics","Bluetooth Speaker"],["electronics","Bluetooth Headphones"],["electronics","Portable Charger"],["electronics","USB-C Hub"],["electronics","QINLIANF Outlet Extender & USB Charging Station"],["electronics","Amazon Echo Dot Smart Speaker"],["electronics","Apple AirTag Tracker"],["electronics","Amazon Fire TV Stick 4K"],["electronics","Wireless Earbuds"],["electronics","Wireless Keyboard"],["electronics","Microsoft Surface Laptop for Business (2025) — 13.8-inch Core Ultra 7"],["electronics","Medify Air Purifier with HEPA H13 Filter"],
  ["pets","Amazon Basics Dog Poop Bags with Dispenser"],["pets","Veken Stainless Steel Cat Water Fountain"],["pets","Snuggle Puppy Heartbeat Comfort Toy"],["pets","No-Pull Dog Harness"],["pets","Washable Reusable Pet Hair Remover"],["pets","Elevated Dog Bowls"],
  ["clothing","Gildan Men's Crew T-Shirts Multipack"],["clothing","Hanes Men's Boxer Briefs Multipack"],["clothing","Amazon Essentials Women's T-Shirt"],["clothing","Women's Lightweight Cardigan"],["clothing","Wide-Leg Jeans for Women"],["clothing","Butterluxe High-Waist Leggings"],
  ["electronics","Anker Portable Power Bank"],["electronics","JBL Portable Bluetooth Speaker"],["electronics","Sony Wireless Noise-Cancelling Headphones"],["electronics","Anker USB-C Hub"],["electronics","Apple AirTag Item Tracker"],["electronics","Amazon Fire TV Stick 4K"]
@@ -30,6 +30,17 @@ const OVERRIDES = {
   cons:["Amazon listing supplied by the user says it cannot be shipped to the selected Pakistan delivery location","Current price was not included in the supplied details","Exact ASIN for the newest model was not included, so this page links to a tagged Amazon search rather than claiming an exact listing","Alexa features, services and smart-home compatibility may vary by country and device"],
   amazonAffiliateUrl:"https://www.amazon.com/s?k=Amazon+Echo+Dot+newest+model+Deep+Sea+Blue&tag=smartpickorau-20",
   imageAlt:"SmartPickora-created illustration of a Deep Sea Blue spherical smart speaker; illustrative artwork, not the official Amazon product photo."
+ },
+ "medify-air-purifier-with-hepa-h13-filter": {
+  isDemo:false,
+  description:"Medify Air Purifier with HEPA H13 filter. The product description supplied for SmartPickora states coverage of 1,793 sq ft in one hour and capture of 99.9% of 0.1-micron particles. These are listing claims, not independently tested SmartPickora results; confirm the exact model, test standard, room-size basis, CADR, filter replacement costs and current availability on the retailer listing.",
+  price:null,
+  rating:null,
+  features:["Supplied listing description states coverage of 1,793 sq ft in one hour; verify the exact model and room-size calculation","Supplied description states the HEPA H13 filter captures 99.9% of 0.1-micron particles; verify the testing standard and exact wording on the listing","Check the model's CADR and recommended room size before comparing with other purifiers","Check replacement-filter availability and ongoing costs","Review noise levels, dimensions, power use and seller/return details before purchase"],
+  pros:["HEPA H13 filtration is a key feature to investigate when comparing air purifiers","Listing claims include a large stated coverage area; verify the exact model and test basis"],
+  cons:["Current price, rating and stock have not been verified","Coverage and particle-capture claims have not been independently tested by SmartPickora","Filter replacement cost, CADR and operating noise should be checked before buying"],
+  amazonAffiliateUrl:"https://a.co/d/0c1cNRn1",
+  imageAlt:"Illustrative product preview for a Medify air purifier; confirm the exact model and official product photo on the Amazon listing."
  },
  "microsoft-surface-laptop-for-business-2025-13-8-inch-core-ultra-7": {
   isDemo:false,
