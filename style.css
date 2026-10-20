@@ -155,3 +155,33 @@ body[data-page="comparisons"] .tray{display:none}
 @media(min-width:800px){.cinematic-grid{grid-template-columns:1.05fr .95fr}.cinematic-stage{min-height:440px}.cinematic-speaker{height:390px}}
 @media(max-width:520px){.cinematic-hero{padding:30px 0 34px}.cinematic-stage{min-height:300px}.cinematic-speaker{height:265px}.cinematic-orbit{width:205px;height:205px}.orbit-two{width:255px;height:255px}.cinematic-caption{left:14px;bottom:12px}.cinematic-floating-chip{right:10px;top:10px;font-size:.58rem}.cinematic-copy .btn-row .btn{width:100%}}
 @media(prefers-reduced-motion:reduce){.cinematic-speaker,.cinematic-glow,.cinematic-orbit,.cinematic-floating-chip{animation:none!important;transition:none!important}}
+
+/* Echo Dot listing-only cinematic showcase (kept off the homepage) */
+.echo-cinematic-listing{display:grid;gap:28px;align-items:center;margin:22px 0 34px;padding:clamp(22px,4vw,48px);border-radius:26px;color:#f5f8ff;background:radial-gradient(ellipse at 76% 44%,#214d6b 0%,#101f33 42%,#070d18 100%);overflow:hidden}
+.echo-cinema-copy h1{color:#fff;font-size:clamp(2.2rem,5vw,3.7rem);letter-spacing:-.04em;margin:8px 0}
+.echo-cinema-copy>p:not(.cinematic-eyebrow){color:#d1e1ed;font-size:1.1rem}
+.echo-cinema-price{font-size:1.6rem;font-weight:800;margin:16px 0;color:#fff}
+.echo-cinema-actions{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.echo-cinema-actions .btn-line{background:transparent;color:#fff;border-color:#7ca5bd}
+.echo-cinema-copy small{display:block;color:#b9c8d7;font-size:.78rem;margin-top:12px}
+.echo-cinema-visual{min-width:0}
+.echo-video-frame{height:clamp(300px,42vw,440px);position:relative;display:grid;place-items:center;overflow:hidden;border:1px solid #8cb8d055;border-radius:22px;background:radial-gradient(ellipse at center,#244d6c 0%,#0c1726 65%);isolation:isolate}
+.echo-motion-product{width:min(92%,450px);height:82%;object-fit:contain;z-index:2;filter:drop-shadow(0 24px 26px #0009);animation:echoListingFloat 5s ease-in-out infinite}
+.echo-light-beam{position:absolute;inset:-30%;background:conic-gradient(from 0deg,transparent,#5ec8f355,transparent,#d6b66c33,transparent);animation:echoListingBeam 12s linear infinite;z-index:-1}
+.echo-rings{position:absolute;width:54%;aspect-ratio:1;border:1px solid #82d7fa55;border-radius:50%;transform:rotateX(65deg);box-shadow:0 0 36px #50b4e522;animation:echoListingOrbit 15s linear infinite}
+.echo-video-label,.echo-video-time{position:absolute;z-index:3;font-size:.65rem;font-weight:800;letter-spacing:.14em;color:#e3f7ff;background:#06111dc9;border:1px solid #83cce544;padding:8px 10px;border-radius:999px}
+.echo-video-label{top:14px;left:14px}.echo-video-time{right:14px;bottom:14px}
+.echo-scene-strip{display:flex;justify-content:space-between;gap:8px;padding:12px 2px;color:#bcd2e4;font-size:.68rem;font-weight:800;letter-spacing:.12em}
+.echo-gallery-row{display:grid;gap:20px;align-items:center;margin:20px 0 30px}
+.echo-gallery-row .imgbox.big{max-width:560px}
+.echo-gallery-caption{color:var(--muted)}.echo-gallery-caption strong{display:block;color:var(--navy);font-size:1.2rem;margin-bottom:6px}
+.echo-gallery-caption .thumbs{margin-top:16px}
+.echo-storyboard{margin:34px 0;padding:24px;border-radius:20px;background:#f2f7fb;border:1px solid #dbe8f0}
+.echo-story-grid{display:grid;gap:12px;margin:16px 0}
+.echo-story-grid>div{padding:16px;border-radius:14px;background:#fff;border:1px solid #dce7ef;display:grid;gap:5px}
+.echo-story-grid b{color:#0e7c86;font-size:.78rem;letter-spacing:.1em}.echo-story-grid strong{font-size:1.05rem}.echo-story-grid p{color:#52667d;font-size:.9rem}
+@keyframes echoListingFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-13px) rotate(1deg)}}
+@keyframes echoListingBeam{to{transform:rotate(360deg)}}
+@keyframes echoListingOrbit{to{transform:rotateX(65deg) rotateZ(360deg)}}
+@media(min-width:800px){.echo-cinematic-listing{grid-template-columns:.9fr 1.1fr}.echo-gallery-row{grid-template-columns:1fr 1fr}.echo-story-grid{grid-template-columns:repeat(3,1fr)}}
+@media(prefers-reduced-motion:reduce){.echo-motion-product,.echo-light-beam,.echo-rings{animation:none!important}}
