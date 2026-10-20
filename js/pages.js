@@ -119,7 +119,7 @@
           <p class="muted">${esc(p.description)}</p>
           <p class="meta"><strong>Price:</strong> ${p.price == null ? "Price to be verified" : esc(p.price)}</p>
           <p class="meta"><strong>Rating:</strong> ${p.rating == null ? "Not independently verified — check the retailer listing" : esc(p.rating)}</p>
-          <div class="actions"><button type="button" class="btn btn-line" data-compare="${esc(p.id)}" aria-pressed="false">Compare</button>${affiliateButton(p)}</div>
+          <div class="actions"><button type="button" class="btn btn-line" data-compare="${esc(p.id)}" aria-pressed="false">Compare</button>${p.id === "amazon-echo-dot-smart-speaker" ? '<a class="btn btn-line" href="echo-dot-motion.html">Watch Cinematic Motion Preview</a>' : ""}${affiliateButton(p)}</div>
         </div>
       </div>
       ${NOTICE}
