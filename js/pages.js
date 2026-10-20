@@ -13,7 +13,7 @@
   if (!root || !page) return;
 
   const params = new URLSearchParams(location.search);
-  const NOTICE = '<aside class="notice" role="note"><strong>Demo Content:</strong> Products, descriptions, pros, cons, and other product details shown on this website are sample content for demonstration purposes only. Real product information, verified reviews, and affiliate links will be added later.</aside>';
+  const NOTICE = '<aside class="notice" role="note"><strong>Product information notice:</strong> Most catalogue entries are examples and have not been independently tested. Verify product specifications, price, availability, seller and reviews on the retailer listing. Some products may have active affiliate links.</aside>';
   const ul = a => `<ul>${listHTML(a)}</ul>`;
   const crumbs = items => `<nav class="crumbs wrap" aria-label="Breadcrumb">${items.map(([t, h]) => h ? `<a href="${h}">${esc(t)}</a>` : `<span aria-current="page">${esc(t)}</span>`).join("<i> / </i>")}</nav>`;
   const setMeta = (title, desc) => { document.title = title; const m = document.querySelector('meta[name="description"]'); if (m) m.content = desc; };
@@ -96,13 +96,13 @@
       return;
     }
     const p = PRODUCTS[idx], c = catById(p.category);
-    setMeta(p.name + " (Demo) – SmartPickora", "Demo page for " + p.name + ": sample overview, features, pros and cons. Real details to be verified.");
+    setMeta(p.name + (p.isDemo ? " (Demo)" : "") + " – SmartPickora", p.isDemo ? "Sample product overview for " + p.name + ". Verify specifications, price and availability before purchase." : "Product information for " + p.name + ". Verify specifications, price and availability on the retailer listing.");
     const gallery = p.gallery || [p.image, placeholderImage(p.name, c.hue, idx + 1), placeholderImage(p.name, c.hue, idx + 2)];
     const related = PRODUCTS.filter(x => x.category === p.category && x.id !== p.id).slice(0, 3);
     const faq = [
-      ["Is this a real review?", "No. This page is demo content. No real testing, customer reviews or verified ratings are shown."],
+      ["Is this a real review?", p.isDemo ? "No. This is sample catalogue content. No hands-on testing, customer reviews or verified ratings are shown." : "No. This is a product listing, not a hands-on review. We have not independently tested the product or verified customer ratings."],
       ["What does it cost?", "Price to be verified. Always check the seller’s page for the current price."],
-      ["Where can I buy it?", "An affiliate link will be added after approval. Until then, the button stays inactive."],
+      ["Where can I buy it?", (p.amazonAffiliateUrl || p.cjAffiliateUrl) ? "Use the active retailer button on this page to view the listing. Check the seller, current price, specifications and availability before buying." : "An affiliate link is not available for this product yet. Check back later for an eligible retailer link."],
       ["How do I compare it?", "Tap Compare on this page, then open the comparison tool to see up to three products side by side."]
     ];
     root.innerHTML = crumbs([["Home","index.html"],["Products","products.html"],[c.name,"products.html?cat=" + p.category],[p.name]]) + `
@@ -140,7 +140,7 @@
 
   /* ---------- COMPARISON TOOL (up to 3 products) ---------- */
   function comparePage(){
-    const defaults = ["apple-airpods-pro-2", "samsung-galaxy-buds3-pro", "sony-wh-1000xm5-headphones"];
+    const defaults = ["bluetooth-speaker", "bluetooth-headphones", "portable-charger"];
     let chosen = compare.length ? compare.slice(0, 3) : defaults;
     const options = sel => '<option value="">None</option>' + CATEGORIES.map(c => `<optgroup label="${esc(c.name)}">${PRODUCTS.filter(p => p.category === c.id).map(p => `<option value="${esc(p.id)}"${p.id === sel ? " selected" : ""}>${esc(p.name)}</option>`).join("")}</optgroup>`).join("");
     setMeta("Compare Products (Demo) – SmartPickora", "Compare up to three demo products side by side on SmartPickora. Unverified details are marked To be verified.");
