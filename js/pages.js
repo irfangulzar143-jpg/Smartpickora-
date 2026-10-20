@@ -215,7 +215,7 @@
       <h2>Information you give us</h2><p>This site does not ask you to create an account. If you contact us by email, we receive the details you send so we can reply.</p>
       <h2>Information stored in your browser</h2><p>The comparison feature saves your selected products in your own browser (local storage). This stays on your device.</p>
       <h2>Hosting</h2><p>This site is hosted on GitHub Pages. The hosting provider may collect technical information such as IP addresses in its server logs.</p>
-      <h2>Analytics, cookies and advertising</h2><p>No analytics or advertising tools are active at the moment. If you add any later, list them here.</p>
+      <h2>Analytics, cookies and advertising</h2><p>Google Analytics 4 is not active until a valid Measurement ID is configured in the site code. If analytics or advertising tools are enabled later, this policy must be updated to explain the data collected, purposes, retention and available controls before relying on it as a final policy.</p>
       <h2>Third-party links</h2><p>Links to other websites, including affiliate partners, are governed by those sites’ own privacy policies.</p>
       <h2>Contact</h2><p>See the <a href="contact.html">Contact page</a>. Add your own contact details here when ready.</p>`},
     terms: {title: "Terms and Conditions (Draft)", desc: "Draft terms and conditions template for SmartPickora.", body: `${DRAFT}
@@ -225,8 +225,9 @@
       <h2>Affiliate links</h2><p>Some links may earn us a commission. See the <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
       <h2>Changes</h2><p>We may update these terms and the site at any time.</p>`},
     disclosure: {title: "Affiliate Disclosure", desc: "How SmartPickora may earn commissions from affiliate links.", body: `
-      <p>SmartPickora may join affiliate programs, such as Amazon Associates and CJ Affiliate. If a product link on this site is an active affiliate link and you buy through it, we may earn a commission at no extra cost to you.</p>
-      <h2>Current status</h2><p>No affiliate links are active yet. Buttons that say “Affiliate link coming soon” are placeholders.</p>
+      <p>SmartPickora may earn a commission when you click an affiliate link and make a qualifying purchase, at no additional cost to you. Affiliate relationships do not guarantee that a product is suitable for every shopper.</p>
+      <p><strong>As an Amazon Associate I earn from qualifying purchases.</strong> A short disclosure is also shown near the featured Amazon link on the Fashion Product Shortlist.</p>
+      <h2>Current status</h2><p>The Fashion Product Shortlist includes a tagged Amazon link to a specific listing. Other catalogue products are still demo placeholders and should not be treated as verified recommendations. Please check each listing’s details, seller, price, availability, size and return terms directly on Amazon.</p>
       <h2>No official affiliation</h2><p>SmartPickora is an independent website. It is not officially affiliated with, endorsed by or sponsored by Amazon, CJ Affiliate or any retailer or brand shown.</p>
       <h2>Our approach</h2><ul><li>Commissions do not change the price you pay.</li><li>We aim to show pros and cons clearly.</li><li>Sample content is labelled as demo content.</li></ul>
       <p>When a program is approved, its required wording will be added to this page.</p>`}
