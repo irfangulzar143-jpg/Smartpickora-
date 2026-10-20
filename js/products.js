@@ -46,7 +46,7 @@ const OVERRIDES = {
  "medify-air-purifier-with-hepa-h13-filter": {
   isDemo:false,
   description:"Medify Air Purifier with HEPA H13 filter. The product description supplied for SmartPickora states coverage of 1,793 sq ft in one hour and capture of 99.9% of 0.1-micron particles. These are listing claims, not independently tested SmartPickora results; confirm the exact model, test standard, room-size basis, CADR, filter replacement costs and current availability on the retailer listing.",
-  price:null,
+  price:"$212.99 (user-provided price; verify current price)",
   rating:null,
   features:["Supplied listing description states coverage of 1,793 sq ft in one hour; verify the exact model and room-size calculation","Supplied description states the HEPA H13 filter captures 99.9% of 0.1-micron particles; verify the testing standard and exact wording on the listing","Check the model's CADR and recommended room size before comparing with other purifiers","Check replacement-filter availability and ongoing costs","Review noise levels, dimensions, power use and seller/return details before purchase"],
   pros:["HEPA H13 filtration is a key feature to investigate when comparing air purifiers","Listing claims include a large stated coverage area; verify the exact model and test basis"],
