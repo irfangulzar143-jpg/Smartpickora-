@@ -69,15 +69,15 @@
     function update(){
       const q = fQ.value.trim().toLowerCase();
       const items = PRODUCTS.filter(p => (cat === "all" || p.category === cat) && inPrice(p, fPrice.value) && (!q || p.name.toLowerCase().includes(q))).sort(SORTS[fSort.value] || byName);
-      const cn = cat === "all" ? "All demo products" : catById(cat).name;
+      const cn = cat === "all" ? "All products" : catById(cat).name;
       $("#pTitle").textContent = cn;
-      setMeta(cn + " (Demo) – SmartPickora", "Browse demo product examples in " + cn + " on SmartPickora. Search by name, filter by price and sort. Sample content only.");
+      setMeta(cn + " – SmartPickora", "Browse product listings and research candidates in " + cn + " on SmartPickora. Verify current details with the retailer before purchase.");
       document.querySelectorAll(".chip").forEach(b => { const on = b.dataset.cat === cat; b.classList.toggle("on", on); b.setAttribute("aria-pressed", String(on)); });
-      $("#count").textContent = items.length + " demo product" + (items.length === 1 ? "" : "s") + " shown";
+      $("#count").textContent = items.length + " product" + (items.length === 1 ? "" : "s") + " shown";
       $("#priceNote").textContent = PRODUCTS.some(p => priceNum(p) === null)
-        ? "Demo products have no verified prices or ratings yet. Products without a verified value are listed last when sorting by price or rating, and are hidden when you choose a price range."
+        ? "Some products do not yet have verified prices or ratings. Unverified values are shown clearly; confirm current details on the retailer listing."
         : "";
-      $("#pGrid").innerHTML = items.length ? items.map(productCard).join("") : '<div class="empty">No demo products match your search or filters. Try a different word, choose All, or set Price range to Any price.</div>';
+      $("#pGrid").innerHTML = items.length ? items.map(productCard).join("") : '<div class="empty">No products match your search or filters. Try a different word, choose All, or set Price range to Any price.</div>';
       syncCompare();
       try { history.replaceState(null, "", cat === "all" ? location.pathname : "?cat=" + cat); } catch (e) {}
     }
@@ -118,7 +118,7 @@
           <span class="cat">${esc(c.name)}</span><h1>${esc(p.name)}</h1>
           <p class="muted">${esc(p.description)}</p>
           <p class="meta"><strong>Price:</strong> ${p.price == null ? "Price to be verified" : esc(p.price)}</p>
-          <p class="meta"><strong>Rating:</strong> ${p.rating == null ? "Sample rating — not a real customer rating" : esc(p.rating)}</p>
+          <p class="meta"><strong>Rating:</strong> ${p.rating == null ? "Not independently verified — check the retailer listing" : esc(p.rating)}</p>
           <div class="actions"><button type="button" class="btn btn-line" data-compare="${esc(p.id)}" aria-pressed="false">Compare</button>${affiliateButton(p)}</div>
         </div>
       </div>
