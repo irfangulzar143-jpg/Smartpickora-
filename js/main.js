@@ -5,6 +5,9 @@ const esc = t => String(t == null ? "" : t).replace(/[&<>"']/g, c => ({"&":"&amp
 /* Is the data file (js/products.js) loaded? */
 const DATA_OK = typeof CATEGORIES !== "undefined" && typeof PRODUCTS !== "undefined" && typeof placeholderImage === "function";
 const catById = id => (DATA_OK && CATEGORIES.find(c => c.id === id)) || {name: String(id), hue: 200};
+const productById = new Map((DATA_OK ? PRODUCTS : []).map(p => [p.id, p]));
+const firstProductByCategory = new Map();
+if (DATA_OK) PRODUCTS.forEach(p => { if (!firstProductByCategory.has(p.category)) firstProductByCategory.set(p.category, p); });
 const safeUrl = u => { const s = String(u || "").trim(); return /^https:\/\//i.test(s) ? s : ""; };
 
 /* Show a visible message instead of failing silently */
@@ -59,11 +62,11 @@ function productCard(p){
 function renderHome(){
   const cg = $("#categoryGrid"), fg = $("#featuredGrid");
   if (cg) cg.innerHTML = CATEGORIES.map(c => {
-    const first = PRODUCTS.find(p => p.category === c.id);
+    const first = firstProductByCategory.get(c.id);
     if (!first) return "";
     return `<a class="cat-card" href="products.html?cat=${encodeURIComponent(c.id)}"><img src="${esc(first.image)}" data-pid="${esc(first.id)}" alt="Demo placeholder for ${esc(c.name)}" loading="lazy" width="400" height="300"><span>${esc(c.name)}</span></a>`;
   }).join("");
-  if (fg) fg.innerHTML = CATEGORIES.map(c => PRODUCTS.find(p => p.category === c.id)).filter(Boolean).map(productCard).join("");
+  if (fg) fg.innerHTML = CATEGORIES.map(c => firstProductByCategory.get(c.id)).filter(Boolean).map(productCard).join("");
 }
 
 /* Compare tray and button states */
@@ -76,7 +79,7 @@ function syncCompare(){
   const tray = $("#tray"), txt = $("#trayText");
   if (!tray || !txt) return;
   tray.hidden = compare.length === 0;
-  const names = compare.map(id => (PRODUCTS.find(p => p.id === id) || {}).name).filter(Boolean);
+  const names = compare.map(id => (productById.get(id) || {}).name).filter(Boolean);
   txt.textContent = names.length + " of 3 selected: " + names.join(", ");
 }
 
@@ -103,8 +106,11 @@ document.addEventListener("error", e => {
   const img = e.target;
   if (!DATA_OK || !img || img.tagName !== "IMG" || img.dataset.failed) return;
   img.dataset.failed = "1";
-  const i = PRODUCTS.findIndex(p => p.id === img.dataset.pid);
-  if (i > -1) img.src = placeholderImage(PRODUCTS[i].name, catById(PRODUCTS[i].category).hue, i);
+  const failedProduct = productById.get(img.dataset.pid);
+  if (failedProduct){
+    const i = PRODUCTS.indexOf(failedProduct);
+    img.src = placeholderImage(failedProduct.name, catById(failedProduct.category).hue, Math.max(0, i));
+  }
 }, true);
 
 /* Start */
@@ -113,7 +119,7 @@ document.addEventListener("error", e => {
     showProblem("The product data did not load. Check that js/products.js exists in your repository, is spelled exactly like that, and was saved completely.");
     return;
   }
-  compare = compare.filter(id => PRODUCTS.some(p => p.id === id));
+  compare = compare.filter(id => productById.has(id));
   try { renderHome(); } catch (err) { console.error(err); showProblem("Part of this page could not load: " + err.message); }
   try { syncCompare(); } catch (err) { console.error(err); }
 })();
