@@ -14,14 +14,12 @@ h1{font-size:2rem}h2{font-size:1.5rem;margin-bottom:8px}h3{font-size:1.1rem}
 .skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:99}
 :focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 [hidden]{display:none!important}
-/* buttons */
 .btn{display:inline-block;border:2px solid transparent;border-radius:10px;padding:11px 16px;min-height:46px;font:700 .95rem inherit;font-family:inherit;text-decoration:none;text-align:center;cursor:pointer}
 .btn-teal{background:var(--teal);color:#fff}.btn-teal:hover{background:var(--teal-d)}
 .btn-line{background:#fff;color:var(--teal-d);border-color:var(--teal)}
 .btn-gold{background:var(--gold);color:#3b2a00}
 .btn-off{background:#e9eef2;color:#5b6b7b;cursor:not-allowed}
 .btn-row{display:flex;gap:10px;flex-wrap:wrap}
-/* header */
 .site-header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:40}
 .bar{display:flex;justify-content:space-between;align-items:center;height:60px}
 .logo{font-size:1.45rem;font-weight:800;text-decoration:none;color:var(--navy);letter-spacing:-.5px}
@@ -37,14 +35,7 @@ h1{font-size:2rem}h2{font-size:1.5rem;margin-bottom:8px}h3{font-size:1.1rem}
 .main-nav .wrap{display:flex;flex-direction:column;padding-bottom:10px}
 .main-nav a{padding:12px 4px;border-bottom:1px solid var(--line);color:var(--navy);text-decoration:none;font-weight:600}
 .main-nav a:hover,.main-nav a[aria-current]{color:var(--teal)}
-@media(min-width:960px){
-  #menuToggle{display:none}
-  .main-nav{display:block}
-  .main-nav .wrap{flex-direction:row;flex-wrap:wrap;gap:2px 16px;padding-bottom:0}
-  .main-nav a{border:0;padding:9px 0;font-size:.9rem}
-  h1{font-size:2.8rem}
-}
-/* hero + home */
+@media(min-width:960px){#menuToggle{display:none}.main-nav{display:block}.main-nav .wrap{flex-direction:row;flex-wrap:wrap;gap:2px 16px;padding-bottom:0}.main-nav a{border:0;padding:9px 0;font-size:.9rem}h1{font-size:2.8rem}}
 .hero{background:linear-gradient(180deg,var(--soft),#fff);padding:34px 0}
 .hero-grid{display:grid;gap:24px;align-items:center}
 .tagline{color:var(--teal-d);font-weight:700;margin-bottom:8px}
@@ -56,7 +47,6 @@ h1{font-size:2rem}h2{font-size:1.5rem;margin-bottom:8px}h3{font-size:1.1rem}
 @media(min-width:700px){.trust{grid-template-columns:repeat(3,1fr)}}
 .trust div{background:var(--soft);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;display:grid}
 .trust span{color:var(--muted);font-size:.92rem}
-/* grids */
 .grid{display:grid;gap:18px;grid-template-columns:1fr}
 @media(min-width:680px){.grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:1000px){.grid{grid-template-columns:repeat(3,1fr)}}
@@ -66,13 +56,11 @@ h1{font-size:2rem}h2{font-size:1.5rem;margin-bottom:8px}h3{font-size:1.1rem}
 .cat-card:hover{transform:translateY(-3px)}
 .cat-card img{aspect-ratio:4/3;object-fit:cover;width:100%}
 .cat-card span{position:absolute;left:0;right:0;bottom:0;padding:22px 12px 10px;color:#fff;font-weight:700;background:linear-gradient(transparent,rgba(15,39,66,.85))}
-/* product card */
 .card{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow);background:#fff;display:flex;flex-direction:column}
 .imgbox{position:relative;background:var(--soft)}
 .imgbox img{aspect-ratio:4/3;object-fit:cover;width:100%}
 .demo,.demo-tag{background:var(--navy);color:#fff;font-size:.75rem;font-weight:800;padding:4px 9px;border-radius:999px;letter-spacing:.5px}
 .demo{position:absolute;top:10px;left:10px}
-.demo-tag{align-self:flex-start}
 .cb{padding:16px;display:flex;flex-direction:column;gap:8px;flex:1}
 .cat{color:var(--teal-d);font-size:.85rem;font-weight:700}
 .cb p{color:var(--muted);font-size:.93rem}
@@ -84,7 +72,6 @@ h1{font-size:2rem}h2{font-size:1.5rem;margin-bottom:8px}h3{font-size:1.1rem}
 .pro{background:#e8f5ee}.con{background:#fbece8}
 .meta{font-size:.9rem!important}
 .actions{display:grid;gap:8px;margin-top:auto;padding-top:6px}
-/* tray + footer + toast */
 .tray{position:fixed;left:0;right:0;bottom:0;background:var(--navy);color:#fff;padding:12px 18px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;z-index:60;font-size:.92rem}
 .tray span{flex:1 1 200px}
 .site-footer{background:var(--navy);color:#cfdbe6;padding:30px 0 90px;margin-top:30px;font-size:.92rem}
@@ -92,7 +79,6 @@ h1{font-size:2rem}h2{font-size:1.5rem;margin-bottom:8px}h3{font-size:1.1rem}
 .logo-foot{font-size:1.3rem;font-weight:800;color:#fff}
 .site-footer .links a{color:#fff;margin-right:14px;display:inline-block;padding:6px 0}
 .toast{position:fixed;left:50%;bottom:84px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:11px 18px;border-radius:10px;z-index:90;max-width:90%;text-align:center;font-size:.93rem;box-shadow:var(--shadow)}
-/* inner pages */
 .crumbs{padding-top:14px;font-size:.9rem;color:var(--muted)}
 .crumbs i{font-style:normal;margin:0 4px}
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 8px}
@@ -134,9 +120,38 @@ body[data-page="comparisons"] .tray{display:none}
 .form label{font-weight:700;font-size:.95rem;margin-top:6px}
 .note{margin-top:14px;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
 .errbox{background:#fdecea;border:1px solid #e9a79f;color:#7a1f14;border-radius:10px;padding:14px 16px;margin:16px 18px;font-weight:600}
+.imgbox{background:linear-gradient(135deg,#f1f7fa,#e5eef3);overflow:hidden;position:relative;border-radius:14px 14px 0 0}
+.imgbox img{width:100%;aspect-ratio:4/3;object-fit:contain;padding:8px;transition:transform .25s ease}
+.card:hover .imgbox img{transform:scale(1.025)}
+.imgbox .demo{position:absolute;top:12px;left:12px;background:#0f2742;color:#fff;padding:4px 9px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.04em}
 
-/* Product imagery: clean, consistent crop and premium shopping-card treatment */
-.imgbox{background:linear-gradient(135deg,#f1f7fa,#e5eef3);overflow:hidden;position:relative;border-radius:14px 14px 0 0;}
-.imgbox img{width:100%;aspect-ratio:4/3;object-fit:contain;padding:8px;transition:transform .25s ease;}
-.card:hover .imgbox img{transform:scale(1.025);}
-.imgbox .demo{position:absolute;top:12px;left:12px;background:#0f2742;color:#fff;padding:4px 9px;border-radius:999px;font-size:.72rem;font-weight:700;letter-spacing:.04em;}
+/* Homepage cinematic featured-product stage: uses the existing Echo Dot image/data */
+.cinematic-hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 78% 42%,#173b5a 0%,#0b1a2b 42%,#07111e 100%);color:#fff;padding:44px 0 50px}
+.cinematic-hero:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(5,13,24,.12),rgba(10,37,58,.3));pointer-events:none}
+.cinematic-grid{position:relative;z-index:1}
+.cinematic-copy h1{color:#fff;max-width:600px;letter-spacing:-.035em}
+.cinematic-copy .tagline{color:#79e2e8;letter-spacing:.09em;font-size:.82rem}
+.cinematic-eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.18em;color:#f5c45b;margin:18px 0 8px}
+.cinematic-copy .lead{color:#d1dfec;max-width:480px}
+.cinematic-price{font-size:1.7rem;font-weight:800;color:#fff;margin:8px 0 18px}
+.cinematic-price span{display:block;font-size:.72rem;font-weight:500;color:#b8c8d8;line-height:1.5}
+.cinematic-copy .btn-line{background:transparent;border-color:#7ca5bd;color:#fff}
+.cinematic-disclosure{color:#aebfd0;font-size:.76rem;margin-top:18px;max-width:510px}
+.cinematic-stage{min-height:330px;position:relative;display:flex;align-items:center;justify-content:center;isolation:isolate;overflow:hidden;border:1px solid rgba(160,210,236,.17);border-radius:28px;background:radial-gradient(ellipse at center,rgba(59,117,156,.28),rgba(7,17,30,.18) 65%);box-shadow:inset 0 0 70px rgba(84,165,220,.08),0 24px 60px rgba(0,0,0,.18)}
+.cinematic-loading{color:#d1dfec;padding:40px;text-align:center}
+.cinematic-glow{position:absolute;width:64%;aspect-ratio:1;border-radius:50%;background:#3a9ad0;filter:blur(65px);opacity:.18;animation:echoGlow 5s ease-in-out infinite alternate;z-index:-1}
+.cinematic-speaker{position:relative;width:min(100%,460px);height:300px;object-fit:contain;filter:drop-shadow(0 25px 25px rgba(0,0,0,.45));animation:echoFloat 5s ease-in-out infinite;z-index:2}
+.cinematic-orbit{position:absolute;width:255px;height:255px;border:1px solid rgba(122,216,255,.2);border-radius:50%;transform:rotateX(65deg) rotateZ(-15deg);animation:orbitSpin 18s linear infinite;z-index:1}
+.orbit-two{width:315px;height:315px;border-color:rgba(245,196,91,.18);animation-duration:26s;animation-direction:reverse}
+.cinematic-caption{position:absolute;left:20px;bottom:18px;display:grid;gap:2px;color:#fff;z-index:3;text-shadow:0 2px 10px #07111e}
+.cinematic-caption span{font-size:.62rem;letter-spacing:.17em;color:#83d9e6;font-weight:800}
+.cinematic-caption strong{font-size:1.15rem}
+.cinematic-caption small{color:#c6d5e3;font-size:.72rem}
+.cinematic-floating-chip{position:absolute;right:15px;top:18px;background:rgba(7,17,30,.72);border:1px solid rgba(145,211,238,.25);border-radius:999px;padding:8px 11px;color:#d7f7ff;font-size:.66rem;font-weight:800;letter-spacing:.09em;animation:chipFloat 4s ease-in-out infinite;z-index:3}
+@keyframes echoFloat{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-12px) rotate(1deg)}}
+@keyframes echoGlow{from{opacity:.12;transform:scale(.9)}to{opacity:.25;transform:scale(1.08)}}
+@keyframes orbitSpin{from{transform:rotateX(65deg) rotateZ(0)}to{transform:rotateX(65deg) rotateZ(360deg)}}
+@keyframes chipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@media(min-width:800px){.cinematic-grid{grid-template-columns:1.05fr .95fr}.cinematic-stage{min-height:440px}.cinematic-speaker{height:390px}}
+@media(max-width:520px){.cinematic-hero{padding:30px 0 34px}.cinematic-stage{min-height:300px}.cinematic-speaker{height:265px}.cinematic-orbit{width:205px;height:205px}.orbit-two{width:255px;height:255px}.cinematic-caption{left:14px;bottom:12px}.cinematic-floating-chip{right:10px;top:10px;font-size:.58rem}.cinematic-copy .btn-row .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){.cinematic-speaker,.cinematic-glow,.cinematic-orbit,.cinematic-floating-chip{animation:none!important;transition:none!important}}
