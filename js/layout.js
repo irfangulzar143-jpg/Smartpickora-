@@ -4,12 +4,10 @@
 (function(){
   "use strict";
   const NAV = [
-    ["index.html","Home"],["fashion.html","Fashion Collection"],["products.html?cat=electronics","Electronics"],["products.html?cat=home-kitchen","Home &amp; Kitchen"],
-    ["products.html?cat=travel","Travel"],["products.html?cat=fitness","Fitness"],["products.html?cat=beauty","Beauty &amp; Personal Care"],
-    ["products.html?cat=office","Office &amp; Productivity"],["buying-guides.html","Buying Guides"],["comparisons.html","Comparisons"],
+    ["index.html","Home"],["pet-accessories.html","Pet Accessories"],["fashion.html","Clothing &amp; Fashion"],["products.html?cat=electronics","Electronics &amp; Gadgets"],["buying-guides.html","Buying Guides"],["comparisons.html","Comparisons"],
     ["about.html","About Us"],["contact.html","Contact"]
   ];
-  const FOOT = [["about.html","About Us"],["contact.html","Contact"],["fashion.html","Fashion Collection"],["privacy-policy.html","Privacy Policy"],["affiliate-disclosure.html","Affiliate Disclosure"],["terms.html","Terms"]];
+  const FOOT = [["about.html","About Us"],["contact.html","Contact"],["pet-accessories.html","Pet Accessories"],["fashion.html","Clothing &amp; Fashion"],["privacy-policy.html","Privacy Policy"],["affiliate-disclosure.html","Affiliate Disclosure"],["terms.html","Terms"]];
 
   /* Google Analytics 4: add the real Measurement ID (format G-XXXXXXXXXX) after creating a GA4 web stream.
      Analytics stays disabled while this value is blank. Never paste an account password or secret here. */
