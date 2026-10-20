@@ -7,7 +7,10 @@ const CATEGORIES = [
 const RAW_PRODUCTS = [
  ["pets","Dog Bed"],["pets","Dog Collar"],["pets","Dog Harness"],["pets","Dog Leash"],["pets","Cat Water Fountain"],["pets","Litter Box"],["pets","Pet Carrier"],["pets","Pet Grooming Brush"],["pets","Interactive Dog Toy"],["pets","Cat Scratching Post"],
  ["clothing","Women's Clothing Basics"],["clothing","Men's Casual Shirts"],["clothing","T-Shirts & Tops"],["clothing","Jeans & Denim"],["clothing","Dresses & Skirts"],["clothing","Jackets & Coats"],["clothing","Activewear & Leggings"],["clothing","Plus-Size Clothing"],["clothing","Sweaters & Knitwear"],["clothing","Fashion Accessories"],
- ["electronics","Bluetooth Speaker"],["electronics","Bluetooth Headphones"],["electronics","Portable Charger"],["electronics","USB-C Hub"],["electronics","QINLIANF Outlet Extender & USB Charging Station"],["electronics","Amazon Echo Dot Smart Speaker"],["electronics","Apple AirTag Tracker"],["electronics","Amazon Fire TV Stick 4K"],["electronics","Wireless Earbuds"],["electronics","Wireless Keyboard"],["electronics","Microsoft Surface Laptop for Business (2025) — 13.8-inch Core Ultra 7"]
+ ["electronics","Bluetooth Speaker"],["electronics","Bluetooth Headphones"],["electronics","Portable Charger"],["electronics","USB-C Hub"],["electronics","QINLIANF Outlet Extender & USB Charging Station"],["electronics","Amazon Echo Dot Smart Speaker"],["electronics","Apple AirTag Tracker"],["electronics","Amazon Fire TV Stick 4K"],["electronics","Wireless Earbuds"],["electronics","Wireless Keyboard"],["electronics","Microsoft Surface Laptop for Business (2025) — 13.8-inch Core Ultra 7"],
+ ["pets","Amazon Basics Dog Poop Bags with Dispenser"],["pets","Veken Stainless Steel Cat Water Fountain"],["pets","Snuggle Puppy Heartbeat Comfort Toy"],["pets","No-Pull Dog Harness"],["pets","Washable Reusable Pet Hair Remover"],["pets","Elevated Dog Bowls"],
+ ["clothing","Gildan Men's Crew T-Shirts Multipack"],["clothing","Hanes Men's Boxer Briefs Multipack"],["clothing","Amazon Essentials Women's T-Shirt"],["clothing","Women's Lightweight Cardigan"],["clothing","Wide-Leg Jeans for Women"],["clothing","Butterluxe High-Waist Leggings"],
+ ["electronics","Anker Portable Power Bank"],["electronics","JBL Portable Bluetooth Speaker"],["electronics","Sony Wireless Noise-Cancelling Headphones"],["electronics","Anker USB-C Hub"],["electronics","Apple AirTag Item Tracker"],["electronics","Amazon Fire TV Stick 4K"]
 ];
 const IMAGE_FILES = {};
 const OVERRIDES = {
@@ -61,6 +64,6 @@ function placeholderImage(label,hue,seed){
 }
 const PRODUCTS=RAW_PRODUCTS.map(([cat,name],i)=>{
  const c=CATEGORIES.find(x=>x.id===cat), id=slug(name);
- const base={id,name,category:cat,description:c.sample,features:["Verify key features on the seller's listing","Check suitability and compatibility before purchase"],pros:["A useful category example for comparison"],cons:["Not independently tested","Current price and availability not verified"],price:null,rating:null,isDemo:true,amazonAffiliateUrl:"",cjAffiliateUrl:"",image:placeholderImage(name,c.hue,i),imageAlt:"Demo placeholder image for "+name};
+ const base={id,name,category:cat,description:c.sample,features:["Verify key features on the seller's listing","Check suitability and compatibility before purchase"],pros:["A useful category example for comparison"],cons:["Not independently tested","Current price and availability not verified"],price:null,rating:null,isDemo:true,amazonAffiliateUrl:"https://www.amazon.com/s?k="+encodeURIComponent(name)+"&tag=smartpickorau-20",cjAffiliateUrl:"",image:placeholderImage(name,c.hue,i),imageAlt:"SmartPickora illustrative preview for "+name+"; official Amazon product image pending authorization"};
  return Object.assign(base,OVERRIDES[id]||{});
 });
