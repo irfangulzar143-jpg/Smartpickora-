@@ -90,6 +90,3 @@ const PRODUCTS=RAW_PRODUCTS.map(([cat,name],i)=>{
  const base={id,name,category:cat,description:c.sample,features:["Verify key features on the seller's listing","Check suitability and compatibility before purchase"],pros:["A useful category example for comparison"],cons:["Not independently tested","Current price and availability not verified"],price:null,rating:null,isDemo:true,amazonAffiliateUrl:"https://www.amazon.com/s?k="+encodeURIComponent(name)+"&tag=smartpickorau-20",cjAffiliateUrl:"",image:placeholderImage(name,c.hue,i),imageAlt:"SmartPickora illustrative preview for "+name+"; official Amazon product image pending authorization"};
  return Object.assign(base,OVERRIDES[id]||{});
 });
-
-// Signal to js/pages.js that the product catalogue script loaded successfully.
-const DATA_OK = true;
