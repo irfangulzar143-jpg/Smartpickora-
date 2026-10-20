@@ -97,6 +97,8 @@
     }
     const p = PRODUCTS[idx], c = catById(p.category);
     setMeta(p.name + (p.isDemo ? " (Demo)" : "") + " – SmartPickora", p.isDemo ? "Sample product overview for " + p.name + ". Verify specifications, price and availability before purchase." : "Product information for " + p.name + ". Verify specifications, price and availability on the retailer listing.");
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (canonicalLink) canonicalLink.href = location.origin + location.pathname + "?id=" + encodeURIComponent(p.id);
     const gallery = p.gallery || [p.image, placeholderImage(p.name, c.hue, idx + 1), placeholderImage(p.name, c.hue, idx + 2)];
     const related = PRODUCTS.filter(x => x.category === p.category && x.id !== p.id).slice(0, 3);
     const faq = [
