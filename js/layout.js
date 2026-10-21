@@ -36,7 +36,7 @@
     slot("site-footer",false).innerHTML = `
       <div id="tray" class="tray" hidden aria-live="polite"><span id="trayText"></span><a class="btn btn-gold" href="comparisons.html">Compare now</a><button type="button" id="trayClear" class="btn btn-line">Clear</button></div>
       <footer class="site-footer"><div class="wrap"><p class="logo-foot">Smart<span>Pickora</span></p>
-      <p>Independent pet accessory research and buying guides. Some links may be affiliate links, which can earn us a commission at no extra cost to you. We only describe links as affiliate links when applicable. See our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
+      <p>Independent pet accessory research and buying guides. If affiliate links are active, we may earn a commission at no extra cost to you. When participating in the Amazon Associates Program, we display the required statement: “As an Amazon Associate I earn from qualifying purchases.” See our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
       <p class="links">${FOOT.map(([h,t])=>`<a href="${h}">${t}</a>`).join(" ")}</p><p>&copy; <span id="year">${new Date().getFullYear()}</span> SmartPickora. Product details and availability may change.</p></div></footer>`;
     const file=location.pathname.split("/").pop()||"index.html";
     document.querySelectorAll("#mainNav a").forEach(a=>{const p=a.getAttribute("href").split("?");if(p[0]===file)a.setAttribute("aria-current","page");});
