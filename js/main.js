@@ -53,6 +53,7 @@ function productCard(p){
       <div class="con"><p class="lbl">Cons</p><ul>${listHTML(p.cons)}</ul></div></div>
       <p class="meta"><strong>Price:</strong> ${p.price == null ? "Price to be verified" : esc(p.price)}</p>
       <p class="meta"><strong>Rating:</strong> ${p.rating == null ? "Not independently verified — check the retailer listing" : esc(p.rating)}</p>
+      ${(safeUrl(p.amazonAffiliateUrl) || safeUrl(p.cjAffiliateUrl)) ? '<p class="small affiliate-note">Affiliate link: we may earn a commission from qualifying purchases at no extra cost to you.</p>' : ""}
       <div class="actions">
         <a class="btn btn-teal" href="product.html?id=${encodeURIComponent(p.id)}">View Product Details</a>
         <button type="button" class="btn btn-line" data-compare="${esc(p.id)}" aria-pressed="${on}">${on ? "Selected" : "Compare"}</button>
