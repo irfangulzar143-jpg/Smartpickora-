@@ -215,38 +215,47 @@
   }
 
   /* ---------- ABOUT / PRIVACY / TERMS / DISCLOSURE ---------- */
-  const DRAFT = '<div class="draft" role="note"><strong>Draft template.</strong> Please review and complete this text, and check it against the laws that apply to you, before relying on it.</div>';
+  
   const INFO = {
-    about: {title: "About Us", desc: "About SmartPickora, a product research and comparison website.", body: `
-      <p>SmartPickora helps pet owners research and compare everyday accessories for dogs and cats before they buy.</p>
-      <h2>What we cover</h2><ul><li>Beds and comfort</li><li>Walking and travel gear</li><li>Grooming and care</li><li>Toys and enrichment</li><li>Feeding and hydration</li></ul>
-      <h2>Demo content</h2><p>Right now, products, descriptions, pros and cons are samples for demonstration. Real information and verified reviews will be added later.</p>
-      <h2>Independence</h2><p>SmartPickora is an independent website. It is not officially affiliated with, endorsed by or sponsored by Amazon, CJ Affiliate or any retailer or brand mentioned. Brand and product names belong to their owners and are used only as examples.</p>
-      <h2>How we may earn</h2><p>Some links may become affiliate links. See the <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>`},
-    privacy: {title: "Privacy Policy (Draft)", desc: "Draft privacy policy template for SmartPickora.", body: `${DRAFT}
-      <p>Last updated: to be completed.</p>
-      <h2>Information you give us</h2><p>This site does not ask you to create an account. If you contact us by email, we receive the details you send so we can reply.</p>
-      <h2>Information stored in your browser</h2><p>The comparison feature saves your selected products in your own browser (local storage). This stays on your device.</p>
-      <h2>Hosting</h2><p>This site is hosted on GitHub Pages. The hosting provider may collect technical information such as IP addresses in its server logs.</p>
-      <h2>Analytics, cookies and advertising</h2><p>Google Analytics 4 is not active until a valid Measurement ID is configured in the site code. If analytics or advertising tools are enabled later, this policy must be updated to explain the data collected, purposes, retention and available controls before relying on it as a final policy.</p>
-      <h2>Third-party links</h2><p>Links to other websites, including affiliate partners, are governed by those sites’ own privacy policies.</p>
-      <h2>Contact</h2><p>See the <a href="contact.html">Contact page</a>. Add your own contact details here when ready.</p>`},
-    terms: {title: "Terms and Conditions (Draft)", desc: "Draft terms and conditions template for SmartPickora.", body: `${DRAFT}
-      <h2>Using this website</h2><p>SmartPickora provides general product information for research only. Content is currently demo content.</p>
-      <h2>No guarantees</h2><p>We do not guarantee that information is complete, current or error-free. Check prices, specifications and availability with the seller before buying.</p>
-      <h2>Third-party websites</h2><p>We are not responsible for the content, products or policies of other websites we link to.</p>
-      <h2>Affiliate links</h2><p>Some links may earn us a commission. See the <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
-      <h2>Changes</h2><p>We may update these terms and the site at any time.</p>`},
-    disclosure: {title: "Affiliate Disclosure", desc: "How SmartPickora may earn commissions from affiliate links.", body: `
-      <p>SmartPickora may earn a commission when you click an affiliate link and make a qualifying purchase, at no additional cost to you. Affiliate relationships do not guarantee that a product is suitable for every shopper.</p>
-      <h2>Current status</h2><p>Most catalogue entries are illustrative placeholders, not verified product recommendations. Retailer buttons appear only when a valid retailer URL has been configured for a product. Before purchasing, check the seller, current price, availability, specifications, sizing and return terms on the retailer website. Add the affiliate programme’s required disclosure wording before publishing any active affiliate links.</p>
-      <h2>No official affiliation</h2><p>SmartPickora is an independent website. It is not officially affiliated with, endorsed by or sponsored by Amazon, CJ Affiliate or any retailer or brand shown.</p>
-      <h2>Our approach</h2><ul><li>Commissions do not change the price you pay.</li><li>We aim to show pros and cons clearly.</li><li>Sample content is labelled as demo content.</li></ul>
-      <p>This page should be reviewed and updated whenever affiliate relationships or retailer links are added or changed.</p>`}
+    about: {title: "About SmartPickora", desc: "Learn how SmartPickora creates practical dog and cat accessory buying guides, comparison checklists and transparent product research.", body: `
+      <p>SmartPickora is an independent pet-accessory research website for people who want to make more informed choices for dogs and cats. We turn common shopping questions into practical checklists so readers can compare fit, materials, cleaning, durability, maintenance and value before choosing a product.</p>
+      <h2>Our editorial approach</h2><ul><li><strong>Start with the need:</strong> explain the problem a product is intended to solve.</li><li><strong>Compare meaningful features:</strong> focus on dimensions, fit, materials, cleaning, safety guidance and ongoing costs.</li><li><strong>Explain trade-offs:</strong> show what to check and where a feature may not suit every pet or household.</li><li><strong>Verify before buying:</strong> retailer prices, stock, specifications and policies can change, so readers should confirm the current listing.</li></ul>
+      <h2>What we cover</h2><p>Our current focus is dog and cat accessories, including beds and comfort, walking and travel, grooming, toys and enrichment, feeding and hydration.</p>
+      <h2>How to read our catalogue</h2><p>Some catalogue entries are illustrative research examples rather than verified products. We label examples and do not claim that a product has been personally tested unless a page clearly explains a real testing process. Placeholder entries should not be treated as endorsements or customer reviews.</p>
+      <h2>Independence and affiliate links</h2><p>SmartPickora is not owned by or officially endorsed by Amazon or any retailer. If we use affiliate links, we may earn a commission from qualifying purchases at no extra cost to the customer. Affiliate relationships do not replace our responsibility to provide clear, useful information. Read our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
+      <h2>Corrections and contact</h2><p>If you notice an error or want us to consider a topic, please use our <a href="contact.html">Contact page</a>. We aim to correct unclear or outdated information when it is brought to our attention.</p>`},
+    privacy: {title: "Privacy Policy", desc: "SmartPickora privacy information covering site hosting, browser storage, contact messages, analytics and third-party affiliate links.", body: `
+      <p><strong>Last updated: 22 October 2026.</strong></p>
+      <p>This policy describes the information practices currently intended for SmartPickora. We do not ask visitors to create accounts or submit payment details on this website.</p>
+      <h2>Information you choose to provide</h2><p>If you contact us by email or through a contact method we make available, we receive the information you choose to send, such as your email address and message, so we can read and respond. Please do not send sensitive personal information unless it is necessary.</p>
+      <h2>Browser storage</h2><p>The product comparison feature may store selected product IDs in your browser's local storage so your comparison selection can persist on your device. This feature is not an account and is not used by us to identify you.</p>
+      <h2>Hosting and technical data</h2><p>SmartPickora is hosted using GitHub Pages. The hosting provider may process technical data, such as IP address, browser information and request logs, for security and service operation under its own terms and privacy notices.</p>
+      <h2>Analytics and cookies</h2><p>Google Analytics is not currently configured on this website. If analytics, advertising, or other tracking technologies are introduced, this policy will be updated to describe the tools, purposes and relevant choices before they are used where required.</p>
+      <h2>Affiliate and external links</h2><p>Some pages may link to third-party retailers or affiliate partners. When you follow a link, the third party's website and privacy policy apply. Retailers may use cookies or other technologies to attribute purchases to referrals; we do not control their systems.</p>
+      <h2>Children</h2><p>This website is a general shopping-information site and is not designed to collect personal information from children.</p>
+      <h2>Changes and contact</h2><p>We may update this policy when site features or applicable requirements change. For privacy questions, use our <a href="contact.html">Contact page</a>.</p>
+      <p>This policy is general information, not legal advice. The site owner should review it against the laws applicable to the business and its visitors.</p>`},
+    terms: {title: "Terms and Conditions", desc: "Terms for using SmartPickora's independent pet accessory research and buying guides.", body: `
+      <p><strong>Last updated: 22 October 2026.</strong></p>
+      <h2>Purpose of the website</h2><p>SmartPickora provides general shopping research, educational checklists and product-comparison information about dog and cat accessories. The site is not a retailer, veterinary service or substitute for professional advice about an animal's health or safety.</p>
+      <h2>Accuracy and changing product details</h2><p>We aim to make information clear, but product specifications, prices, availability, seller details, delivery options, warranties and return terms can change. Some catalogue entries are illustrative examples and are not verified endorsements. Always confirm the current information with the manufacturer or retailer before purchasing.</p>
+      <h2>No product-testing claim</h2><p>Unless a page explicitly describes a genuine testing method and results, you should not assume that we have physically tested a product or personally used it. Sample pros, cons and checklists are general research guidance, not customer reviews.</p>
+      <h2>Third-party websites and purchases</h2><p>When you leave SmartPickora, the third party's terms, privacy practices and purchase conditions apply. Orders, payments, shipping, returns, warranties and customer support are handled by the retailer, not SmartPickora.</p>
+      <h2>Affiliate relationships</h2><p>Some links may be affiliate links that can earn a commission from qualifying purchases at no extra cost to you. Affiliate relationships are disclosed on the site and do not guarantee that a product is right for every reader. See our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>
+      <h2>Intellectual property and acceptable use</h2><p>Unless otherwise stated, site text and design are provided by SmartPickora. Brand names and product names belong to their respective owners. Do not copy or republish site content in a way that violates applicable rights or law.</p>
+      <h2>Changes</h2><p>We may update site content and these terms as the website develops. Continued use of the website after an update means you are viewing the current version.</p>
+      <p>These terms are general information and should be reviewed by the site owner for the laws applicable to the business and its visitors.</p>`},
+    disclosure: {title: "Affiliate Disclosure", desc: "How SmartPickora discloses affiliate links and potential commissions to readers.", body: `
+      <p>SmartPickora may use affiliate links. If you click an affiliate link and make a qualifying purchase, we may earn a commission at no additional cost to you. A commission does not mean a product is suitable for every shopper.</p>
+      <h2>Amazon Associates disclosure</h2><p>When SmartPickora participates in the Amazon Associates Program, this site will clearly display the required statement: <strong>“As an Amazon Associate I earn from qualifying purchases.”</strong> We will not describe ourselves as an active Amazon Associate unless our participation is accepted and active.</p>
+      <h2>How to recognise affiliate links</h2><p>Where affiliate links are active, we aim to place a clear notice near the link or product recommendation, in addition to this page. A retailer button may take you to a third-party website, where the retailer's terms, prices, availability and privacy policy apply.</p>
+      <h2>Product information and editorial independence</h2><p>Some catalogue entries are illustrative examples and are not verified product endorsements or product tests. We do not claim personal testing unless a page describes a real test. Always check the current seller listing for price, stock, specifications, sizing, safety information and return terms.</p>
+      <h2>Independence</h2><p>SmartPickora is an independent website and is not owned by or officially endorsed by Amazon or any retailer. Brand and product names belong to their respective owners.</p>
+      <h2>Updates</h2><p>This disclosure will be kept aligned with the affiliate programmes and links actually used on the site.</p>`}
   };
   function infoPage(key){
     const i = INFO[key];
-    setMeta(i.title + " – SmartPickora", i.desc);
+    setMeta(i.title + " – SmartPickora", i.desc);\n    const ogTitle = document.querySelector('meta[property="og:title"]'); if (ogTitle) ogTitle.content = i.title + " – SmartPickora";\n    const ogDesc = document.querySelector('meta[property="og:description"]'); if (ogDesc) ogDesc.content = i.desc;
     root.innerHTML = crumbs([["Home","index.html"],[i.title]]) + `<section class="section wrap page"><h1>${i.title}</h1>${i.body}</section>`;
   }
 
