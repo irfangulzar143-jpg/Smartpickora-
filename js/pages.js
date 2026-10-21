@@ -68,7 +68,7 @@
 
     function update(){
       const q = fQ.value.trim().toLowerCase();
-      const items = PRODUCTS.filter(p => (cat === "all" || p.category === cat) && inPrice(p, fPrice.value) && (!q || p.name.toLowerCase().includes(q))).sort(SORTS[fSort.value] || byName);
+      const items = PRODUCTS.filter(p => (cat === "all" || cat === "pets" || p.category === cat) && inPrice(p, fPrice.value) && (!q || p.name.toLowerCase().includes(q))).sort(SORTS[fSort.value] || byName);
       const cn = cat === "all" ? "All products" : catById(cat).name;
       $("#pTitle").textContent = cn;
       setMeta(cn + " – SmartPickora", "Browse product listings and research candidates in " + cn + " on SmartPickora. Verify current details with the retailer before purchase.");
