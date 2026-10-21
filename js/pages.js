@@ -154,12 +154,12 @@
 
   /* ---------- COMPARISON TOOL (up to 3 products) ---------- */
   function comparePage(){
-    const defaults = ["bluetooth-speaker", "bluetooth-headphones", "portable-charger"];
+    const defaults = ["supportive-dog-bed", "dog-harness", "pet-water-fountain"];
     let chosen = compare.length ? compare.slice(0, 3) : defaults;
     const options = sel => '<option value="">None</option>' + CATEGORIES.map(c => `<optgroup label="${esc(c.name)}">${PRODUCTS.filter(p => p.category === c.id).map(p => `<option value="${esc(p.id)}"${p.id === sel ? " selected" : ""}>${esc(p.name)}</option>`).join("")}</optgroup>`).join("");
-    setMeta("Compare Products (Demo) – SmartPickora", "Compare up to three demo products side by side on SmartPickora. Unverified details are marked To be verified.");
+    setMeta("Compare Pet Accessories – SmartPickora", "Compare dog and cat accessories by features, care needs and practical buying considerations. Verify current product details with the retailer.");
     root.innerHTML = crumbs([["Home","index.html"],["Products","products.html"],["Comparisons"]]) + `<section class="section wrap">
-      <h1>Compare products</h1>${NOTICE}
+      <h1>Compare pet accessories</h1>${NOTICE}
       <p class="muted">Choose up to three demo products. Anything not yet checked says “To be verified”.</p>
       <div class="controls">${[0, 1, 2].map(i => `<label>Product ${i + 1}<select class="cmpSel">${options(chosen[i])}</select></label>`).join("")}</div>
       <div id="cmpOut"></div></section>`;
@@ -189,21 +189,21 @@
 
   /* ---------- BUYING GUIDES (demo outlines, not tested reviews) ---------- */
   const GUIDES = [
-    ["How to Choose the Right Power Bank", "electronics", "Things to think about before choosing a portable charger.",
-      ["Capacity and physical size (verify on the product page)", "Ports and cable compatibility with your devices", "Weight and how easy it is to carry", "Safety information published by the maker"]],
-    ["What to Consider Before Buying Wireless Earbuds", "electronics", "A sample checklist for comparing wireless earbuds.",
-      ["Fit and comfort", "Battery life claims (verify independently)", "Device compatibility", "Call and noise features, where listed"]],
-    ["How to Choose an Air Fryer for Your Kitchen", "home-kitchen", "Sample points for comparing air fryers.",
-      ["Capacity for your household", "Counter space and storage", "Ease of cleaning", "Controls you will actually use"]],
-    ["Essential Accessories for International Travel", "travel", "A starter checklist of travel accessories to research.",
-      ["Plug adapter for your destinations", "Portable charger", "Packing organizers", "Comfort items for long journeys"]],
-    ["How to Choose a Laptop Stand", "office", "Sample points for comparing laptop stands.",
-      ["Adjustable height or angle", "Laptop size and weight it supports", "Portability", "Stability and ventilation"]],
-    ["Important Features to Compare Before Buying Headphones", "electronics", "A sample checklist for comparing headphones.",
-      ["Comfort and fit", "Wired or wireless connection", "Noise reduction features, where listed", "Battery life and charging, where applicable"]]
+    ["How to Choose a Supportive Dog Bed", "comfort", "Compare sleeping space, materials, cleaning and support claims before choosing a bed.",
+      ["Measure your dog in its usual sleeping position", "Check cover washing instructions and replacement options", "Review materials and any support claims carefully", "Confirm dimensions, delivery and return terms"]],
+    ["How to Choose a Dog Harness", "walking", "Use fit, adjustability and secure fastening as the starting points for comparison.",
+      ["Measure your dog using the maker's sizing guide", "Check secure clips, stitching and adjustment points", "Look for reflective details if useful for your routine", "Introduce the harness gradually and check comfort"]],
+    ["Pet Travel Carrier Buying Checklist", "walking", "Compare carriers for your pet and the journey you plan to take.",
+      ["Check your pet's measurements and weight", "Review ventilation, closure security and cleaning", "Check the airline or transport provider's current rules", "Confirm dimensions and return policy"]],
+    ["Choosing a Grooming Brush for Your Pet", "grooming", "Match grooming tools to coat type, sensitivity and your pet's comfort.",
+      ["Identify coat length and texture", "Check maker guidance for suitable coat types", "Inspect contact points and cleanability", "Stop if grooming causes discomfort"]],
+    ["How to Choose Safe Enrichment Toys", "play", "Compare toys by size, play style, materials and supervision needs.",
+      ["Choose a size suitable for your pet", "Consider chewing habits and play style", "Check materials and cleaning instructions", "Inspect regularly and supervise play"]],
+    ["Choosing Pet Bowls and Water Fountains", "feeding", "Compare daily-use convenience, cleaning and ongoing maintenance.",
+      ["Choose capacity suited to your pet", "Check material and cleaning instructions", "For fountains, confirm filter availability and replacement costs", "Keep drinking water fresh and clean equipment regularly"]]
   ];
   function guidesPage(){
-    setMeta("Buying Guides (Demo) – SmartPickora", "Sample buying guide outlines on SmartPickora. Demo content only.");
+    setMeta("Pet Buying Guides – SmartPickora", "Practical checklists for choosing pet beds, harnesses, carriers, grooming tools, enrichment toys and feeding accessories.");
     root.innerHTML = crumbs([["Home","index.html"],["Buying Guides"]]) + `<section class="section wrap">
       <h1>Buying Guides</h1>${NOTICE}
       <article class="notice"><strong>Featured collection:</strong> Explore men’s and women’s fashion for every season—from shirts, T-shirts, jeans and trousers to dresses, jackets, activewear and accessories. <a href="fashion.html">Explore the All-Season Fashion Collection</a>.</article>
@@ -244,7 +244,7 @@
       <h2>Current status</h2><p>The Fashion Product Shortlist includes a tagged Amazon link to a specific listing. Other catalogue products are still demo placeholders and should not be treated as verified recommendations. Please check each listing’s details, seller, price, availability, size and return terms directly on Amazon.</p>
       <h2>No official affiliation</h2><p>SmartPickora is an independent website. It is not officially affiliated with, endorsed by or sponsored by Amazon, CJ Affiliate or any retailer or brand shown.</p>
       <h2>Our approach</h2><ul><li>Commissions do not change the price you pay.</li><li>We aim to show pros and cons clearly.</li><li>Sample content is labelled as demo content.</li></ul>
-      <p>When a program is approved, its required wording will be added to this page.</p>`}
+      <p>This page should be reviewed and updated whenever affiliate relationships or retailer links are added or changed.</p>`}
   };
   function infoPage(key){
     const i = INFO[key];
