@@ -205,9 +205,8 @@
   function guidesPage(){
     setMeta("Pet Buying Guides – SmartPickora", "Practical checklists for choosing pet beds, harnesses, carriers, grooming tools, enrichment toys and feeding accessories.");
     root.innerHTML = crumbs([["Home","index.html"],["Buying Guides"]]) + `<section class="section wrap">
-      <h1>Buying Guides</h1>${NOTICE}
-      <article class="notice"><strong>Featured collection:</strong> Explore men’s and women’s fashion for every season—from shirts, T-shirts, jeans and trousers to dresses, jackets, activewear and accessories. <a href="fashion.html">Explore the All-Season Fashion Collection</a>.</article>
-      <p class="muted">These are short sample outlines. Full guides will be written after real research. They are not product tests.</p>
+      <h1>Pet Buying Guides</h1>${NOTICE}
+      <p class="muted">Use these practical checklists as a starting point. They are not product tests; verify product specifications, fit, safety guidance and current retailer details before buying.</p>
       <div class="grid">${GUIDES.map(([t, c, s, pts]) => `<article class="card"><div class="cb">
         <span class="demo-tag">DEMO CONTENT</span><h2 class="gh">${esc(t)}</h2><p>${esc(s)}</p>
         <details class="faq"><summary>Sample checklist</summary><ul>${listHTML(pts)}</ul></details>
@@ -219,8 +218,8 @@
   const DRAFT = '<div class="draft" role="note"><strong>Draft template.</strong> Please review and complete this text, and check it against the laws that apply to you, before relying on it.</div>';
   const INFO = {
     about: {title: "About Us", desc: "About SmartPickora, a product research and comparison website.", body: `
-      <p>SmartPickora is designed to help people research and compare products before they buy.</p>
-      <h2>What we cover</h2><ul><li>Electronics</li><li>Home &amp; Kitchen</li><li>Travel</li><li>Fitness</li><li>Beauty &amp; Personal Care</li><li>Office &amp; Productivity</li></ul>
+      <p>SmartPickora helps pet owners research and compare everyday accessories for dogs and cats before they buy.</p>
+      <h2>What we cover</h2><ul><li>Beds and comfort</li><li>Walking and travel gear</li><li>Grooming and care</li><li>Toys and enrichment</li><li>Feeding and hydration</li></ul>
       <h2>Demo content</h2><p>Right now, products, descriptions, pros and cons are samples for demonstration. Real information and verified reviews will be added later.</p>
       <h2>Independence</h2><p>SmartPickora is an independent website. It is not officially affiliated with, endorsed by or sponsored by Amazon, CJ Affiliate or any retailer or brand mentioned. Brand and product names belong to their owners and are used only as examples.</p>
       <h2>How we may earn</h2><p>Some links may become affiliate links. See the <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.</p>`},
@@ -240,8 +239,7 @@
       <h2>Changes</h2><p>We may update these terms and the site at any time.</p>`},
     disclosure: {title: "Affiliate Disclosure", desc: "How SmartPickora may earn commissions from affiliate links.", body: `
       <p>SmartPickora may earn a commission when you click an affiliate link and make a qualifying purchase, at no additional cost to you. Affiliate relationships do not guarantee that a product is suitable for every shopper.</p>
-      <p><strong>As an Amazon Associate I earn from qualifying purchases.</strong> A short disclosure is also shown near the featured Amazon link on the Fashion Product Shortlist.</p>
-      <h2>Current status</h2><p>The Fashion Product Shortlist includes a tagged Amazon link to a specific listing. Other catalogue products are still demo placeholders and should not be treated as verified recommendations. Please check each listing’s details, seller, price, availability, size and return terms directly on Amazon.</p>
+      <h2>Current status</h2><p>Most catalogue entries are illustrative placeholders, not verified product recommendations. Retailer buttons appear only when a valid retailer URL has been configured for a product. Before purchasing, check the seller, current price, availability, specifications, sizing and return terms on the retailer website. Add the affiliate programme’s required disclosure wording before publishing any active affiliate links.</p>
       <h2>No official affiliation</h2><p>SmartPickora is an independent website. It is not officially affiliated with, endorsed by or sponsored by Amazon, CJ Affiliate or any retailer or brand shown.</p>
       <h2>Our approach</h2><ul><li>Commissions do not change the price you pay.</li><li>We aim to show pros and cons clearly.</li><li>Sample content is labelled as demo content.</li></ul>
       <p>This page should be reviewed and updated whenever affiliate relationships or retailer links are added or changed.</p>`}
