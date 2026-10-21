@@ -247,7 +247,9 @@
   };
   function infoPage(key){
     const i = INFO[key];
-    setMeta(i.title + " – SmartPickora", i.desc);\n    const ogTitle = document.querySelector('meta[property="og:title"]'); if (ogTitle) ogTitle.content = i.title + " – SmartPickora";\n    const ogDesc = document.querySelector('meta[property="og:description"]'); if (ogDesc) ogDesc.content = i.desc;
+    setMeta(i.title + " – SmartPickora", i.desc);
+    const ogTitle = document.querySelector('meta[property="og:title"]'); if (ogTitle) ogTitle.content = i.title + " – SmartPickora";
+    const ogDesc = document.querySelector('meta[property="og:description"]'); if (ogDesc) ogDesc.content = i.desc;
     root.innerHTML = crumbs([["Home","index.html"],[i.title]]) + `<section class="section wrap page"><h1>${i.title}</h1>${i.body}</section>`;
   }
 
